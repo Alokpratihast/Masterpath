@@ -10,7 +10,6 @@ datasource db {
 model Lead {
   id String @id @default(cuid())
 
-  // NeoDove unique lead ID
   neoDoveLeadId String? @unique
 
   fullName String
@@ -19,12 +18,8 @@ model Lead {
 
   type LeadType @default(ADMISSION)
 
-  // Campaign relationship
   campaignId String?
-  campaign   Campaign? @relation(
-    fields: [campaignId],
-    references: [id]
-  )
+  campaign   Campaign? @relation(fields: [campaignId], references: [id])
 
   courseSlug String?
   courseName String?
@@ -47,7 +42,6 @@ model Campaign {
   name String
   slug String @unique
 
-  // NeoDove campaign ID
   neoDoveCampaignId String? @unique
 
   isActive Boolean @default(true)
@@ -55,7 +49,6 @@ model Campaign {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  // One campaign → many leads
   leads Lead[]
 }
 
