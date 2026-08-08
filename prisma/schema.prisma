@@ -8,13 +8,23 @@ datasource db {
 }
 
 model Lead {
-  id       String  @id @default(cuid())
+  id String @id @default(cuid())
+
+  // NeoDove unique lead ID
+  neoDoveLeadId String? @unique
 
   fullName String
   phone    String?
   email    String?
 
-  type     LeadType @default(ADMISSION)
+  type LeadType @default(ADMISSION)
+
+  // Campaign relationship
+  campaignId String?
+  campaign   Campaign? @relation(
+    fields: [campaignId],
+    references: [id]
+  )
 
   courseSlug String?
   courseName String?
@@ -22,16 +32,36 @@ model Lead {
   subject String?
   message String?
 
-  source  LeadSource @default(WEBSITE)
-  status  LeadStatus @default(NEW)
+  source LeadSource @default(WEBSITE)
+  status LeadStatus @default(NEW)
+
   remarks String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
+model Campaign {
+  id String @id @default(cuid())
+
+  name String
+  slug String @unique
+
+  // NeoDove campaign ID
+  neoDoveCampaignId String? @unique
+
+  isActive Boolean @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // One campaign → many leads
+  leads Lead[]
+}
+
 model Admin {
-  id       String @id @default(cuid())
+  id String @id @default(cuid())
+
   fullName String
   email    String @unique
   password String
@@ -57,4 +87,5 @@ enum LeadSource {
   FACEBOOK
   INSTAGRAM
   LINKEDIN
+  NEODOVE
 }
