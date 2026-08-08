@@ -9,7 +9,7 @@ import {
 
 export const achievements = [
   {
-    value: "13+",
+    value: "7+",
     label: "Years of Excellence",
     description: "Delivering career-focused education since our inception.",
     icon: Award,

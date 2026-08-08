@@ -1,18 +1,29 @@
-type FormFieldProps = {
+import {
+  FieldError,
+  FieldValues,
+  Path,
+  UseFormRegister,
+} from "react-hook-form";
+
+type FormFieldProps<T extends FieldValues> = {
   label: string;
-  name: string;
+  name: Path<T>;
   type?: string;
   placeholder: string;
   textarea?: boolean;
+  register: UseFormRegister<T>;
+  error?: FieldError;
 };
 
-export default function FormField({
+export default function FormField<T extends FieldValues>({
   label,
   name,
   type = "text",
   placeholder,
   textarea = false,
-}: FormFieldProps) {
+  register,
+  error,
+}: FormFieldProps<T>) {
   return (
     <div>
       <label
@@ -25,19 +36,33 @@ export default function FormField({
       {textarea ? (
         <textarea
           id={name}
-          name={name}
           rows={6}
           placeholder={placeholder}
-          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-blue-600"
+          {...register(name)}
+          className={`w-full rounded-xl border bg-white px-4 py-3 outline-none transition ${
+            error
+              ? "border-red-500 focus:border-red-500"
+              : "border-slate-300 focus:border-blue-600"
+          }`}
         />
       ) : (
         <input
           id={name}
-          name={name}
           type={type}
           placeholder={placeholder}
-          className="h-12 w-full rounded-xl border border-slate-300 bg-white px-4 outline-none transition focus:border-blue-600"
+          {...register(name)}
+          className={`h-12 w-full rounded-xl border bg-white px-4 outline-none transition ${
+            error
+              ? "border-red-500 focus:border-red-500"
+              : "border-slate-300 focus:border-blue-600"
+          }`}
         />
+      )}
+
+      {error && (
+        <p className="mt-2 text-sm font-medium text-red-600">
+          {error.message}
+        </p>
       )}
     </div>
   );

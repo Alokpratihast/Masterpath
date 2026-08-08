@@ -1,11 +1,62 @@
+"use client";
+
+import { useState } from "react";
 import { Send } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 import FormField from "./Formfiled";
 
+import {
+  contactSchema,
+  ContactInput,
+} from "@/validation/contact";
+
 export default function ContactForm() {
+  const [loading, setLoading] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactInput>({
+    resolver: zodResolver(contactSchema),
+  });
+
+  const onSubmit = async (data: ContactInput) => {
+    try {
+      setLoading(true);
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message);
+      }
+
+      alert("Enquiry submitted successfully.");
+
+      reset();
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="bg-slate-50 py-28">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+
         {/* Heading */}
 
         <div className="text-center">
@@ -25,64 +76,91 @@ export default function ContactForm() {
 
         {/* Form */}
 
-        <form className="mt-16 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:p-10">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="mt-16 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:p-10"
+        >
           <div className="grid gap-6 md:grid-cols-2">
-            <FormField
+
+            <FormField<ContactInput>
               label="Full Name"
-              name="name"
+              name="fullName"
               placeholder="Enter your full name"
+              register={register}
+              error={errors.fullName}
             />
 
-            <FormField
+            <FormField<ContactInput>
               label="Email Address"
               name="email"
               type="email"
               placeholder="Enter your email"
+              register={register}
+              error={errors.email}
             />
 
-            <FormField
+            <FormField<ContactInput>
               label="Phone Number"
               name="phone"
               type="tel"
               placeholder="Enter your phone number"
+              register={register}
+              error={errors.phone}
             />
 
             <div>
               <label
-                htmlFor="course"
+                htmlFor="subject"
                 className="mb-2 block text-sm font-semibold text-slate-700"
               >
                 Interested Course
               </label>
 
               <select
-                id="course"
-                name="course"
+                id="subject"
+                {...register("subject")}
                 className="h-12 w-full rounded-xl border border-slate-300 bg-white px-4 outline-none transition focus:border-blue-600"
               >
-                <option>Select Course</option>
-                <option>Advanced Python</option>
-                <option>Full Stack Development</option>
-                <option>Data Analyst</option>
-                <option>Digital Marketing</option>
+                <option value="">
+                  Select Course
+                </option>
+
+                <option>
+                  Advanced Python
+                </option>
+
+                <option>
+                  Full Stack Development
+                </option>
+
+                <option>
+                  Data Analyst
+                </option>
+
+                <option>
+                  Digital Marketing
+                </option>
               </select>
             </div>
           </div>
 
           <div className="mt-6">
-            <FormField
+            <FormField<ContactInput>
               label="Message"
               name="message"
               placeholder="Tell us how we can help you..."
               textarea
+              register={register}
+              error={errors.message}
             />
           </div>
 
           <button
             type="submit"
-            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700"
+            disabled={loading}
+            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
           >
-            Send Message
+            {loading ? "Sending..." : "Send Message"}
 
             <Send className="h-5 w-5" />
           </button>
