@@ -8,7 +8,7 @@ export const dataAnalystCourse: Course = {
   category: "Technology",
 
   summary:
-    "Learn Excel, SQL, Python, Power BI, statistics, and business analytics.",
+    "The Data Analyst program is designed to help students develop the skills needed to analyze data and generate meaningful insights for businesses. This course covers essential tools and technologies used in modern data analysis, including Python, Power BI, Tableau, and cloud platforms. Students will learn how to collect, process, visualize, and interpret data to support decision-making.\n\nThe program focuses on practical learning through real-world datasets and industry-based projects. By the end of the course, learners will gain the confidence and technical skills required to begin their careers as Data Analysts in the growing data-driven industry.",
 
   duration: "4 Months",
 

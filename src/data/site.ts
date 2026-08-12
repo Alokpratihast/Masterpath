@@ -20,4 +20,5 @@ export const navLinks = [
   { label: "Courses", href: "/courses" },
   { label: "Placement", href: "/placement" },
   { label: "Contact", href: "/contact" },
+  { label: "Our Services", href: "/our-services" },
 ];

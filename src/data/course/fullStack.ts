@@ -8,7 +8,7 @@ export const fullStackCourse: Course = {
   category: "Technology",
 
   summary:
-    "Become a production-ready full stack developer using modern web technologies.",
+    "The Full Stack Development program is designed to equip students with the skills required to build modern web applications from front-end to back-end. This course covers essential technologies used in the software industry, including Java, Spring Boot, React or Angular, and cloud platforms. Students will gain hands-on experience in developing scalable applications, working with databases, and managing code using version control systems.\n\nMasterpath program focuses on practical learning through real-time projects and industry-relevant scenarios. By the end of the training, learners will be prepared to start their careers as Full Stack Developers in the software industry.",
 
   duration: "6 Months",
 

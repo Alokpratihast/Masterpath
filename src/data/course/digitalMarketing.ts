@@ -8,7 +8,7 @@ export const digitalMarketingCourse: Course = {
   category: "Marketing",
 
   summary:
-    "Master SEO, Google Ads, Meta Ads, Analytics, and Content Marketing.",
+    "The Digital Marketing program is designed to help students and professionals build strong skills in online marketing and digital business strategies. This course covers essential areas such as search engine optimization (SEO), search engine marketing (SEM), social media marketing, and data-driven marketing strategies. Students will also gain practical knowledge of modern AI-powered marketing tools and analytics platforms used by businesses today.\n\nMasterpath Faculty/Trainer focuses on real-world campaigns, performance tracking, and digital growth strategies. By the end of the program, learners will develop the skills required to work in the fast-growing digital marketing industry.",
 
   duration: "3 Months",
 

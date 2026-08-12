@@ -6,15 +6,20 @@ import HiringPartners from "@/components/home/HiringPartners";
 import Testimonials from "@/components/home/Testimonial";
 import FAQ from "@/components/home/FAQ";
 import FinalCTA from "@/components/home/FinalCTA";
+import WhoWeAre from "@/components/home/WhoWeAre";
+import StudentAchievements from "@/components/home/StudentAchievements.tsx/StudentAchievements";
+
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <WhoWeAre/>
       <FeaturedProgram />
       <WhyChoose />
       <PlacementJourney />
-      <HiringPartners />
+      {/* <HiringPartners /> */}
+      <StudentAchievements/>
       <Testimonials />
       <FAQ />
       <FinalCTA />
