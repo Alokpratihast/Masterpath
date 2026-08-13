@@ -22,19 +22,22 @@ export default function GlobalLeadPopup() {
     courseSlug: "",
   });
 
-  // Open popup after 10 seconds
+  // Keep the hero readable on first load, then show the lead form later.
   useEffect(() => {
     const submitted = sessionStorage.getItem(
       "globalLeadSubmitted"
     );
+    const dismissed = sessionStorage.getItem(
+      "globalLeadDismissed"
+    );
 
-    if (submitted === "true") {
+    if (submitted === "true" || dismissed === "true") {
       return;
     }
 
     const timer = window.setTimeout(() => {
       setIsOpen(true);
-    }, 5000);
+    }, 30000);
 
     return () => {
       window.clearTimeout(timer);
@@ -70,6 +73,11 @@ export default function GlobalLeadPopup() {
     if (loading) {
       return;
     }
+
+    sessionStorage.setItem(
+      "globalLeadDismissed",
+      "true"
+    );
 
     setIsOpen(false);
   }
@@ -122,6 +130,9 @@ export default function GlobalLeadPopup() {
       sessionStorage.setItem(
         "globalLeadSubmitted",
         "true"
+      );
+      sessionStorage.removeItem(
+        "globalLeadDismissed"
       );
 
       setForm({

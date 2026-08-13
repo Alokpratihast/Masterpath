@@ -1,325 +1,223 @@
 // import Link from "next/link";
-// import {
-//   ArrowRight,
-//   Award,
-//   BriefcaseBusiness,
-//   GraduationCap,
-//   Users,
-//   ShieldCheck,
-//   CircleCheckBig,
-//   type LucideIcon,
-// } from "lucide-react";
+// import { ArrowRight, Award } from "lucide-react";
 
-// const stats: {
-//   value: string;
-//   label: string;
-//   Icon: LucideIcon;
-// }[] = [
-//   {
-//     value: "20+",
-//     label: "Job-ready Courses",
-//     Icon: GraduationCap,
-//   },
-//   {
-//     value: "5k+",
-//     label: "Learners Trained",
-//     Icon: Users,
-//   },
-//   {
-//     value: "30+",
-//     label: "Hiring Partners",
-//     Icon: BriefcaseBusiness,
-//   },
-//   {
-//     value: "4.8/5",
-//     label: "Student Rating",
-//     Icon: Award,
-//   },
-// ];
+// import { homeHero } from "@/data/homeHero";
+
+// import HeroVisual from "./HeroVisual";
+// import HeroFeatures from "./HeroFeatures";
+// import HeroStats from "./HeroStats";
 
 // export default function Hero() {
 //   return (
-//     <section className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50 to-blue-50 border-b border-slate-200">
-//       {/* Background Blur */}
-//       <div className="absolute inset-0 overflow-hidden">
-//         <div className="absolute -left-40 top-0 h-96 w-96 rounded-full bg-blue-200/30 blur-3xl" />
-//         <div className="absolute right-0 bottom-0 h-[450px] w-[450px] rounded-full bg-emerald-200/30 blur-3xl" />
+//     <section className="relative overflow-hidden border-b border-[#182A55] bg-gradient-to-br from-[#06143B] via-[#0B2B73] to-[#03102D]">
+//       {/* Background Decoration */}
+//       <div className="pointer-events-none absolute inset-0 overflow-hidden">
+//         <div className="absolute -left-40 -top-32 h-[450px] w-[450px] rounded-full bg-[#2E5EFF]/20 blur-3xl" />
+
+//         <div className="absolute -bottom-40 right-0 h-[500px] w-[500px] rounded-full bg-[#16C79A]/10 blur-3xl" />
+
+//         <div className="absolute right-[25%] top-10 h-64 w-64 rounded-full bg-[#FFB020]/10 blur-3xl" />
+
+//         <div
+//           className="absolute inset-0 opacity-[0.04]"
+//           style={{
+//             backgroundImage:
+//               "linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)",
+//             backgroundSize: "60px 60px",
+//           }}
+//         />
 //       </div>
 
-//       <div className="relative mx-auto grid max-w-7xl gap-16 px-4 py-24 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
-//         {/* Left */}
-//         <div className="flex flex-col justify-center">
-//           <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-700">
-//             <Award className="h-4 w-4" />
-//             13+ Years of Career-Focused Training
-//           </div>
+//       {/* Main Content */}
+//       <div className="relative mx-auto max-w-7xl px-4 pb-10 pt-12 sm:px-6 sm:pb-12 sm:pt-14 lg:px-8 lg:pb-12 lg:pt-10">
+//         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,0.9fr)_520px] lg:gap-8">
+//           {/* LEFT CONTENT */}
+//           <div className="flex flex-col justify-center">
+//             {/* Badge */}
+//             <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-bold uppercase text-white shadow-lg backdrop-blur-md sm:text-sm">
+//               <span className="relative flex h-2.5 w-2.5">
+//                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#16C79A] opacity-75" />
+//                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#16C79A]" />
+//               </span>
 
-//           <h1 className="text-5xl font-black leading-tight tracking-tight text-slate-900 lg:text-6xl">
-//             Upgrade your career with
-//             <span className="block text-blue-700">
-//               practical, placement-focused courses.
-//             </span>
-//           </h1>
+//               <Award className="h-4 w-4 text-[#FFB020]" />
 
-//           <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600">
-//             Learn from experienced industry professionals, build real-world
-//             projects, earn recognized certifications, and receive dedicated
-//             placement support to confidently launch your career.
-//           </p>
-
-//           {/* Buttons */}
-//           <div className="mt-10 flex flex-wrap gap-4">
-//             <Link
-//               href="/courses"
-//               className="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-7 py-4 font-semibold text-white transition hover:bg-blue-800 hover:shadow-xl"
-//             >
-//               Explore Courses
-//               <ArrowRight className="h-4 w-4" />
-//             </Link>
-
-//             <Link
-//               href="/contact"
-//               className="inline-flex items-center rounded-xl border border-slate-300 bg-white px-7 py-4 font-semibold text-slate-900 transition hover:border-blue-700 hover:text-blue-700"
-//             >
-//               Book Free Counselling
-//             </Link>
-//           </div>
-
-//           {/* Trust Points */}
-//           <div className="mt-10 flex flex-wrap gap-6 text-sm font-medium text-slate-700">
-//             <div className="flex items-center gap-2">
-//               <CircleCheckBig className="h-5 w-5 text-emerald-600" />
-//               Live Projects
+//               {homeHero.badge}
 //             </div>
 
-//             <div className="flex items-center gap-2">
-//               <CircleCheckBig className="h-5 w-5 text-emerald-600" />
-//               Industry Mentors
-//             </div>
+//             {/* Heading */}
+//             <h1 className="max-w-[620px] text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[56px] xl:text-[60px]">
+//               {homeHero.title.line1}
+//               <br />
+//               {homeHero.title.line2}
+//               <br />
 
-//             <div className="flex items-center gap-2">
-//               <ShieldCheck className="h-5 w-5 text-emerald-600" />
-//               Placement Support
-//             </div>
-//           </div>
-//         </div>
+//               <span className="relative inline-block">
+//                 <span className="text-[#18C8FF]">
+//                   {homeHero.title.line3}
+//                 </span>
 
-//         {/* Right */}
-//         <div className="relative flex items-center justify-center">
-//           {/* Decorative Card */}
-//           <div className="absolute -top-8 right-0 h-28 w-28 rounded-full bg-blue-100 blur-2xl" />
+//                 <span className="absolute -bottom-2 left-0 h-1 w-2/3 rounded-full bg-[#FFB020]" />
+//               </span>
+//             </h1>
 
-//           <div className="grid grid-cols-2 gap-5">
-//             {stats.map(({ value, label, Icon }) => (
-//               <div
-//                 key={label}
-//                 className="group rounded-3xl border border-slate-200 bg-white/90 p-7 backdrop-blur shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-600 hover:shadow-2xl"
+//             {/* Description */}
+//             <p className="mt-5 max-w-xl text-base leading-7 text-slate-300 sm:text-lg">
+//               {homeHero.description}
+//             </p>
+
+//             {/* CTA */}
+//             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4">
+//               <Link
+//                 href={homeHero.primaryButton.href}
+//                 className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#2E5EFF] px-7 py-4 font-bold text-white shadow-[0_12px_30px_-10px_rgba(46,94,255,0.8)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#4772FF]"
 //               >
-//                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 transition group-hover:bg-blue-700">
-//                   <Icon className="h-7 w-7 text-blue-700 transition group-hover:text-white" />
-//                 </div>
+//                 {homeHero.primaryButton.label}
 
-//                 <h3 className="mt-6 text-4xl font-black text-slate-900">
-//                   {value}
-//                 </h3>
+//                 <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+//               </Link>
 
-//                 <p className="mt-2 text-sm leading-6 text-slate-600">
-//                   {label}
-//                 </p>
-//               </div>
-//             ))}
+//               <Link
+//                 href={homeHero.secondaryButton.href}
+//                 className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-7 py-4 font-bold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white/15"
+//               >
+//                 {homeHero.secondaryButton.label}
+//               </Link>
+//             </div>
+
+//             {/* Features */}
+//             <HeroFeatures />
+//           </div>
+
+//           {/* RIGHT VISUAL */}
+//           <div className="relative flex h-[430px] w-full items-start justify-center lg:justify-end">
+//             <HeroVisual students={homeHero.students} />
 //           </div>
 //         </div>
+
+//         {/* STATS */}
+//         <HeroStats />
 //       </div>
+
+//       {/* Bottom Fade */}
+//       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#03102D]/40 to-transparent" />
 //     </section>
 //   );
 // }
 
 import Link from "next/link";
-import {
-  ArrowRight,
-  Award,
-  BriefcaseBusiness,
-  GraduationCap,
-  Users,
-  ShieldCheck,
-  CircleCheckBig,
-  Sparkles,
-  type LucideIcon,
-} from "lucide-react";
+import { ArrowRight, Award } from "lucide-react";
 
-const stats: {
-  value: string;
-  label: string;
-  Icon: LucideIcon;
-  bg: string;
-  fg: string;
-  hoverBg: string;
-}[] = [
-  {
-    value: "20+",
-    label: "Job-ready courses",
-    Icon: GraduationCap,
-    bg: "bg-[#EAF0FF]",
-    fg: "text-[#2E5EFF]",
-    hoverBg: "group-hover:bg-[#2E5EFF]",
-  },
-  {
-    value: "5k+",
-    label: "Learners trained",
-    Icon: Users,
-    bg: "bg-[#FFF3DE]",
-    fg: "text-[#B87700]",
-    hoverBg: "group-hover:bg-[#FFB020]",
-  },
-  {
-    value: "30+",
-    label: "Hiring partners",
-    Icon: BriefcaseBusiness,
-    bg: "bg-[#E6FBF4]",
-    fg: "text-[#0E9A78]",
-    hoverBg: "group-hover:bg-[#16C79A]",
-  },
-  {
-    value: "4.8/5",
-    label: "Student rating",
-    Icon: Award,
-    bg: "bg-[#FFE9E9]",
-    fg: "text-[#D14747]",
-    hoverBg: "group-hover:bg-[#FF6B6B]",
-  },
-];
+import { homeHero } from "@/data/homeHero";
+
+import HeroVisual from "./HeroVisual";
+import HeroFeatures from "./HeroFeatures";
+import HeroStats from "./HeroStats";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#F4F6FF] border-b border-[#E4E9FB]">
-      {/* Background blur — three tints instead of one, matches the multi-color card system */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -left-40 top-0 h-96 w-96 rounded-full bg-[#2E5EFF]/10 blur-3xl" />
-        <div className="absolute right-0 bottom-0 h-[450px] w-[450px] rounded-full bg-[#16C79A]/10 blur-3xl" />
-        <div className="absolute right-[28%] top-10 h-56 w-56 rounded-full bg-[#FFB020]/10 blur-3xl" />
+    <section className="relative overflow-hidden border-b border-[#182A55] bg-gradient-to-br from-[#06143B] via-[#0B2B73] to-[#03102D]">
+      {/* Background Decoration */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -left-40 -top-32 h-[450px] w-[450px] rounded-full bg-[#2E5EFF]/20 blur-3xl" />
+
+        <div className="absolute -bottom-40 right-0 h-[500px] w-[500px] rounded-full bg-[#16C79A]/10 blur-3xl" />
+
+        <div className="absolute right-[25%] top-10 h-64 w-64 rounded-full bg-[#FFB020]/10 blur-3xl" />
+
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
       </div>
 
-      <div className="relative mx-auto grid max-w-7xl gap-16 px-4 py-24 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
-        {/* Left */}
-        <div className="flex flex-col justify-center">
-          <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-[#0F172A] shadow-[0_4px_16px_-4px_rgba(15,23,42,0.15)]">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#16C79A] opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#16C79A]" />
-            </span>
-            12 learners placed this week
-          </div>
+      {/* Main Content */}
+      <div className="relative mx-auto max-w-7xl px-4 pb-10 pt-12 sm:px-6 sm:pb-12 sm:pt-14 lg:px-8 lg:pb-12 lg:pt-10">
+        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.9fr)_520px] lg:gap-8">
+          {/* LEFT CONTENT */}
+          <div className="flex flex-col justify-center">
+            {/* Badge */}
+            <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-bold uppercase text-white shadow-lg backdrop-blur-md sm:text-sm">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#16C79A] opacity-75" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#16C79A]" />
+              </span>
 
-          <h1 className="text-5xl font-black leading-tight tracking-tight text-[#0F172A] lg:text-6xl">
-            Upgrade your career with
-            <span className="relative mt-2 block w-fit text-[#2E5EFF]">
-              practical, placement-focused courses.
-              <svg
-                className="absolute -bottom-2 left-0 w-full text-[#FFB020]"
-                viewBox="0 0 400 12"
-                fill="none"
-                aria-hidden="true"
+              <Award className="h-4 w-4 text-[#FFB020]" />
+
+              {homeHero.badge}
+            </div>
+
+            {/* Heading */}
+            <h1 className="max-w-[620px] text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[56px] xl:text-[60px]">
+              {homeHero.title.line1}
+              <br />
+              {homeHero.title.line2}
+              <br />
+
+              <span className="relative inline-block">
+                <span className="bg-gradient-to-r from-[#18C8FF] to-[#6FE3FF] bg-clip-text text-transparent">
+                  {homeHero.title.line3}
+                </span>
+
+                <span className="absolute -bottom-2 left-0 h-1 w-2/3 rounded-full bg-gradient-to-r from-[#FFB020] to-[#FFD37A]" />
+              </span>
+            </h1>
+
+            {/* Description */}
+            <p className="mt-5 max-w-xl text-base leading-7 text-slate-300 sm:text-lg">
+              {homeHero.description}
+            </p>
+
+            {/* CTA */}
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4">
+              <Link
+                href={homeHero.primaryButton.href}
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#2E5EFF] to-[#4772FF] px-7 py-4 font-bold text-white shadow-[0_12px_30px_-10px_rgba(46,94,255,0.8)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_-10px_rgba(46,94,255,0.9)]"
               >
-                <path
-                  d="M2 9C60 3 130 3 200 6C270 9 340 3 398 5"
-                  stroke="currentColor"
-                  strokeWidth="5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
-          </h1>
+                {homeHero.primaryButton.label}
 
-          <p className="mt-8 max-w-xl text-lg leading-8 text-[#4B5675]">
-            Learn from experienced industry professionals, build real-world
-            projects, earn recognized certifications, and receive dedicated
-            placement support to confidently launch your career.
-          </p>
+                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
 
-          {/* Buttons */}
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="/courses"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#2E5EFF] px-7 py-4 font-bold text-white shadow-[0_10px_24px_-8px_rgba(46,94,255,0.55)] transition hover:-translate-y-0.5 hover:bg-[#1E3FCC]"
-            >
-              Explore courses
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+              <Link
+                href={homeHero.secondaryButton.href}
+                className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-7 py-4 font-bold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white/15"
+              >
+                {homeHero.secondaryButton.label}
+              </Link>
+            </div>
 
-            <Link
-              href="/contact"
-              className="inline-flex items-center rounded-xl border-2 border-[#E4E9FB] bg-white px-7 py-4 font-bold text-[#0F172A] transition hover:border-[#2E5EFF] hover:text-[#2E5EFF]"
-            >
-              Book free counselling
-            </Link>
+            {/* Features */}
+            <HeroFeatures />
           </div>
 
-          {/* Trust Points */}
-          <div className="mt-10 flex flex-wrap gap-3 text-sm font-bold text-[#0F172A]">
-            <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
-              <CircleCheckBig className="h-4 w-4 text-[#16C79A]" />
-              Live projects
-            </div>
-
-            <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
-              <CircleCheckBig className="h-4 w-4 text-[#16C79A]" />
-              Industry mentors
-            </div>
-
-            <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
-              <ShieldCheck className="h-4 w-4 text-[#16C79A]" />
-              Placement support
+          {/* RIGHT VISUAL =========================================
+              HeroVisual's internal layout is a fixed 520x430px
+              canvas with hard-coded pixel coordinates. Instead of
+              touching any of those coordinates, we scale the WHOLE
+              canvas down as a single rigid unit per breakpoint using
+              CSS transform. This keeps every element's relative
+              position identical at any screen size — only the
+              overall size changes.
+              ======================================================= */}
+          <div className="relative mx-auto h-[215px] w-[260px] sm:h-[279px] sm:w-[338px] md:h-[344px] md:w-[416px] lg:mx-0 lg:h-[430px] lg:w-[520px]">
+            <div className="absolute left-0 top-0 h-[430px] w-[520px] origin-top-left scale-50 sm:scale-[0.65] md:scale-[0.8] lg:scale-100">
+              <HeroVisual students={homeHero.students} />
             </div>
           </div>
         </div>
 
-        {/* Right */}
-        <div className="relative flex items-center justify-center">
-          {/* Signature element: floating "just placed" toast, anchors the placement-first story */}
-          <div className="absolute -top-7 -left-4 z-10 hidden -rotate-3 items-center gap-3 rounded-2xl border border-[#E4E9FB] bg-white px-4 py-3 shadow-[0_16px_32px_-12px_rgba(15,23,42,0.25)] sm:flex">
-            <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[#2E5EFF] text-xs font-black text-white">
-              RS
-            </div>
-            <div className="leading-tight">
-              <p className="flex items-center gap-1 text-xs font-black text-[#0F172A]">
-                <Sparkles className="h-3 w-3 text-[#FFB020]" />
-                Rahul just got placed
-              </p>
-              <p className="text-[11px] font-semibold text-[#6B7690]">
-                Full Stack Dev @ TCS ·{" "}
-                <span className="text-[#0E9A78]">₹6.2 LPA</span>
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-5">
-            {stats.map(({ value, label, Icon, bg, fg, hoverBg }) => (
-              <div
-                key={label}
-                className="group rounded-3xl border border-[#E4E9FB] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_24px_48px_-20px_rgba(15,23,42,0.25)]"
-              >
-                <div
-                  className={`flex h-14 w-14 items-center justify-center rounded-2xl ${bg} transition ${hoverBg}`}
-                >
-                  <Icon
-                    className={`h-7 w-7 ${fg} transition group-hover:text-white`}
-                  />
-                </div>
-
-                <h3 className="mt-6 text-4xl font-black text-[#0F172A]">
-                  {value}
-                </h3>
-
-                <p className="mt-2 text-sm leading-6 text-[#5B6685]">
-                  {label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* STATS */}
+        <HeroStats />
       </div>
+
+      {/* Bottom Fade */}
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#03102D]/40 to-transparent" />
     </section>
   );
 }
-
