@@ -24,7 +24,7 @@ export const cmaUsaCourse: Course = {
 
   price: "Contact for Price",
 
-  image: "/courses/cma-usa.jpg",
+  image: "/images/courses/5.webp",
 
   highlights: [
     "Professional Certification",

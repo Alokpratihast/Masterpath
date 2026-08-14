@@ -24,7 +24,7 @@ export const pythonCourse: Course = {
 
   price: "₹25,000",
 
-  image: "/courses/python.jpg",
+  image: "/images/courses/1.webp",
 
   highlights: [
     "Live Projects",

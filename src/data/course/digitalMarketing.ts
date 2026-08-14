@@ -23,8 +23,8 @@ export const digitalMarketingCourse: Course = {
   featured: true,
 
   price: "₹20,000",
-
-  image: "/courses/digital-marketing.jpg",
+  
+  image: "/images/courses/6.webp",
 
   highlights: [
     "Campaign Labs",

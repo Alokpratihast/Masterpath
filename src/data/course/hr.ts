@@ -24,7 +24,7 @@ export const hrCourse: Course = {
 
   price: "₹20,000",
 
-  image: "/courses/hr.jpg",
+  image: "/images/courses/4.webp",
 
   highlights: [
     "Practical HR Training",

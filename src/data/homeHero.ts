@@ -37,17 +37,17 @@ export const homeHero = {
 
   stats: [
     {
-      value: "20+",
+      value: "10+",
       label: "Job-ready Courses",
       icon: "book",
     },
     {
-      value: "5K+",
+      value: "1.1K+",
       label: "Learners Trained",
       icon: "users",
     },
     {
-      value: "300+",
+      value: "54+",
       label: "Hiring Partners",
       icon: "handshake",
     },
@@ -78,7 +78,7 @@ export const homeHero = {
   ],
 
   students: [
-    "/images/hero/hero1.png",
+    "/images/hero/hero4.png",
     "/images/hero/hero2.png",
     "/images/hero/hero3.png",
     "/images/hero/hero6.png",

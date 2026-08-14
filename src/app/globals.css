@@ -59,3 +59,22 @@ body {
   background: #047857;
   color: #ffffff;
 }
+
+
+@keyframes achievement-slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 12px));
+  }
+}
+
+.achievement-track {
+  animation: achievement-slide 35s linear infinite;
+}
+
+.achievement-slider:hover .achievement-track {
+  animation-play-state: paused;
+}

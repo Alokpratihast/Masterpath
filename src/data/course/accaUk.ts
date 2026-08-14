@@ -24,7 +24,7 @@ export const accaUkCourse: Course = {
 
   price: "Contact for Price",
 
-  image: "/courses/acca-uk.jpg",
+  image: "/images/courses/4.webp",
 
   highlights: [
     "Global Accountancy Qualification",

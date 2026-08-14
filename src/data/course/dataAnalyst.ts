@@ -24,7 +24,7 @@ export const dataAnalystCourse: Course = {
 
   price: "₹30,000",
 
-  image: "/courses/data-analyst.jpg",
+  image: "/images/courses/2.webp",
 
   highlights: [
     "Portfolio Projects",

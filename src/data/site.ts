@@ -1,24 +1,23 @@
 export const siteConfig = {
   name: "NFS Masterpath",
-  phone: "+91 80887 07979",
-  email: "info@nfs-masterpath.com",
-  address: "Bangalore, Karnataka",
-  whatsappUrl: "https://wa.me/918088707979",
+  phone: "+917026543916",
+  email: "hr@nfs-masterpath.com",
+  address: "15th Main Rd, 3rd Stage, 4th Block, Sahakar Nagar, Byatarayanapura, Bengaluru, Karnataka 560092",
+  whatsappUrl: "https://wa.me/917026543916",
 };
 
 export const socialLinks = [
-  { label: "Facebook", href: "https://facebook.com" },
-  { label: "Instagram", href: "https://instagram.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "X", href: "https://x.com" },
-  { label: "YouTube", href: "https://youtube.com" },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61591760738338" },
+  { label: "Instagram", href: "https://www.instagram.com/masterpath_upskill/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/nfs-masterpath" },
+  { label: "X", href: "https://x.com/MasterPath_" },
+  { label: "YouTube", href: " https://www.youtube.com/@MasterPathofficial" },
 ];
 
 export const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
   { label: "Courses", href: "/courses" },
   { label: "Placement", href: "/placement" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
-  { label: "Our Services", href: "/our-services" },
 ];
