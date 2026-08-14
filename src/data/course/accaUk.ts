@@ -10,7 +10,7 @@ export const accaUkCourse: Course = {
   summary:
     "The ACCA UK program is designed to help students and professionals build strong knowledge and practical skills in accounting, finance, taxation, auditing, financial reporting, and business management. This globally recognized professional accountancy qualification prepares learners for careers across accounting and finance by developing their understanding of financial principles, business decision-making, and professional practices.\n\nMasterpath training focuses on practical learning, industry-relevant concepts, exam preparation, and career development. By the end of the program, learners will develop the knowledge and confidence required to pursue professional opportunities in accounting, finance, audit, taxation, and financial management.",
 
-  duration: "3 Months / Exam",
+  duration: "3 Months ",
 
   mode: "Hybrid",
 

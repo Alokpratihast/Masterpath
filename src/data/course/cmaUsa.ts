@@ -22,7 +22,7 @@ export const cmaUsaCourse: Course = {
 
   featured: true,
 
-  price: "Contact for Price",
+  price: "65",
 
   image: "/images/courses/5.webp",
 

@@ -9,7 +9,7 @@ export const siteConfig = {
 export const socialLinks = [
   { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61591760738338" },
   { label: "Instagram", href: "https://www.instagram.com/masterpath_upskill/" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/nfs-masterpath" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/masterpath/" },
   { label: "X", href: "https://x.com/MasterPath_" },
   { label: "YouTube", href: " https://www.youtube.com/@MasterPathofficial" },
 ];
