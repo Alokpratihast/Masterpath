@@ -1,12 +1,16 @@
 
+
+
+
+// import Link from "next/link";
+// import Image from "next/image";
 // import {
 //   BarChart3,
 //   Code2,
 //   Megaphone,
 //   Sparkles,
-
 // } from "lucide-react";
-// import Link from "next/link";
+
 // import HeroStudent from "./HeroStudent";
 
 // type HeroVisualProps = {
@@ -32,7 +36,7 @@
 //   {
 //     name: "Digital Marketing",
 //     icon: Megaphone,
-//     className: "right-[15px] bottom-[20px]",
+//     className: "right-[15px] bottom-[-10px]",
 //   },
 // ];
 
@@ -122,24 +126,36 @@
 //           PYTHON
 //       ========================== */}
 
-//       <div className="absolute left-[55px] top-[115px] z-30 animate-float">
-//         <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl backdrop-blur-xl transition-transform duration-300 hover:scale-105 sm:px-4 sm:py-2.5">
-//           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500/20 sm:h-8 sm:w-8">
-//             <Code2 className="h-3.5 w-3.5 text-cyan-300 sm:h-4 sm:w-4" />
-//           </span>
+//       <Link
+//   href="/courses/advanced-python-training"
+//   className="absolute left-[55px] top-[115px] z-30 animate-float"
+// >
+//   <div className="flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/15 sm:px-4 sm:py-2.5">
+//     <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 sm:h-8 sm:w-8">
+//       <Image
+//         src="/images/hero/1.png"
+//         alt="Python"
+//         width={20}
+//         height={20}
+//         className="h-4 w-4 sm:h-5 sm:w-5"
+//       />
+//     </span>
 
-//           <span className="whitespace-nowrap text-xs font-semibold text-white sm:text-sm">
-//             Python
-//           </span>
-//         </div>
-//       </div>
+//     <span className="whitespace-nowrap text-xs font-semibold text-white sm:text-sm">
+//       Python
+//     </span>
+//   </div>
+// </Link>
 
 //       {/* =========================
 //           FULL STACK
 //       ========================== */}
 
-//       <div className="absolute right-0 top-[175px] z-30 animate-float [animation-delay:0.7s]">
-//         <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl backdrop-blur-xl transition-transform duration-300 hover:scale-105 sm:px-4 sm:py-2.5">
+//       <Link
+//         href="/courses/full-stack-development"
+//         className="absolute right-0 top-[175px] z-30 animate-float [animation-delay:0.7s]"
+//       >
+//         <div className="flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/15 sm:px-4 sm:py-2.5">
 //           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500/20 sm:h-8 sm:w-8">
 //             <Code2 className="h-3.5 w-3.5 text-cyan-300 sm:h-4 sm:w-4" />
 //           </span>
@@ -148,14 +164,17 @@
 //             Full Stack
 //           </span>
 //         </div>
-//       </div>
+//       </Link>
 
 //       {/* =========================
 //           DATA ANALYTICS
 //       ========================== */}
 
-//       <div className="absolute left-[25px] bottom-[65px] z-30 animate-float [animation-delay:1.4s]">
-//         <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl backdrop-blur-xl transition-transform duration-300 hover:scale-105 sm:px-4 sm:py-2.5">
+//       <Link
+//         href="/courses/data-analyst-training"
+//         className="absolute left-[25px] bottom-[65px] z-30 animate-float [animation-delay:1.4s]"
+//       >
+//         <div className="flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/15 sm:px-4 sm:py-2.5">
 //           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500/20 sm:h-8 sm:w-8">
 //             <BarChart3 className="h-3.5 w-3.5 text-cyan-300 sm:h-4 sm:w-4" />
 //           </span>
@@ -164,14 +183,17 @@
 //             Data Analytics
 //           </span>
 //         </div>
-//       </div>
+//       </Link>
 
 //       {/* =========================
 //           DIGITAL MARKETING
 //       ========================== */}
 
-//       <div className="absolute right-[15px] bottom-[-10px] z-30 animate-float [animation-delay:2.1s]">
-//         <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl backdrop-blur-xl transition-transform duration-300 hover:scale-105 sm:px-4 sm:py-2.5">
+//       <Link
+//         href="/courses/digital-marketing"
+//         className="absolute right-[15px] bottom-[-10px] z-30 animate-float [animation-delay:2.1s]"
+//       >
+//         <div className="flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/15 sm:px-4 sm:py-2.5">
 //           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500/20 sm:h-8 sm:w-8">
 //             <Megaphone className="h-3.5 w-3.5 text-cyan-300 sm:h-4 sm:w-4" />
 //           </span>
@@ -180,7 +202,7 @@
 //             Digital Marketing
 //           </span>
 //         </div>
-//       </div>
+//       </Link>
 
 //       {/* =========================
 //           SPARKLE
@@ -209,13 +231,10 @@
 
 
 
+
 import Link from "next/link";
-import {
-  BarChart3,
-  Code2,
-  Megaphone,
-  Sparkles,
-} from "lucide-react";
+import Image from "next/image";
+import { Sparkles } from "lucide-react";
 
 import HeroStudent from "./HeroStudent";
 
@@ -226,22 +245,22 @@ type HeroVisualProps = {
 const programs = [
   {
     name: "Python",
-    icon: Code2,
+    icon: "/images/hero/python.png",
     className: "left-[55px] top-[115px]",
   },
   {
     name: "Full Stack",
-    icon: Code2,
+    icon: "/images/hero/fullstack.png",
     className: "right-[0px] top-[175px]",
   },
   {
     name: "Data Analytics",
-    icon: BarChart3,
+    icon: "/images/hero/data_analytics.png",
     className: "left-[25px] bottom-[65px]",
   },
   {
     name: "Digital Marketing",
-    icon: Megaphone,
+    icon: "/images/hero/digital_marketing.png",
     className: "right-[15px] bottom-[-10px]",
   },
 ];
@@ -337,8 +356,14 @@ export default function HeroVisual({
         className="absolute left-[55px] top-[115px] z-30 animate-float"
       >
         <div className="flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/15 sm:px-4 sm:py-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500/20 sm:h-8 sm:w-8">
-            <Code2 className="h-3.5 w-3.5 text-cyan-300 sm:h-4 sm:w-4" />
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 sm:h-10 sm:w-10">
+            <Image
+              src="/images/hero/python.png"
+              alt="Python"
+              width={32}
+              height={32}
+              className="h-7 w-7 object-contain sm:h-8 sm:w-8"
+            />
           </span>
 
           <span className="whitespace-nowrap text-xs font-semibold text-white sm:text-sm">
@@ -356,8 +381,14 @@ export default function HeroVisual({
         className="absolute right-0 top-[175px] z-30 animate-float [animation-delay:0.7s]"
       >
         <div className="flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/15 sm:px-4 sm:py-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500/20 sm:h-8 sm:w-8">
-            <Code2 className="h-3.5 w-3.5 text-cyan-300 sm:h-4 sm:w-4" />
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 sm:h-10 sm:w-10">
+            <Image
+              src="/images/hero/fullstack.png"
+              alt="Full Stack"
+              width={32}
+              height={32}
+              className="h-7 w-7 object-contain sm:h-8 sm:w-8"
+            />
           </span>
 
           <span className="whitespace-nowrap text-xs font-semibold text-white sm:text-sm">
@@ -375,8 +406,14 @@ export default function HeroVisual({
         className="absolute left-[25px] bottom-[65px] z-30 animate-float [animation-delay:1.4s]"
       >
         <div className="flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/15 sm:px-4 sm:py-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500/20 sm:h-8 sm:w-8">
-            <BarChart3 className="h-3.5 w-3.5 text-cyan-300 sm:h-4 sm:w-4" />
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 sm:h-10 sm:w-10">
+            <Image
+              src="/images/hero/data_analytics.png"
+              alt="Data Analytics"
+              width={32}
+              height={32}
+              className="h-7 w-7 object-contain sm:h-8 sm:w-8"
+            />
           </span>
 
           <span className="whitespace-nowrap text-xs font-semibold text-white sm:text-sm">
@@ -394,8 +431,14 @@ export default function HeroVisual({
         className="absolute right-[15px] bottom-[-10px] z-30 animate-float [animation-delay:2.1s]"
       >
         <div className="flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 shadow-xl backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/15 sm:px-4 sm:py-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500/20 sm:h-8 sm:w-8">
-            <Megaphone className="h-3.5 w-3.5 text-cyan-300 sm:h-4 sm:w-4" />
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 sm:h-10 sm:w-10">
+            <Image
+              src="/images/hero/digital_marketing.png"
+              alt="Digital Marketing"
+              width={32}
+              height={32}
+              className="h-7 w-7 object-contain sm:h-8 sm:w-8"
+            />
           </span>
 
           <span className="whitespace-nowrap text-xs font-semibold text-white sm:text-sm">

@@ -1,3 +1,6 @@
+
+
+
 import type { LucideIcon } from "lucide-react";
 
 type Accent = "blue" | "amber" | "mint" | "coral";
@@ -38,6 +41,8 @@ type JourneyCardProps = {
   description: string;
   Icon: LucideIcon;
   accent?: Accent;
+  /** When true, card sits lower to create a zigzag rhythm on desktop */
+  offset?: boolean;
 };
 
 export default function JourneyCard({
@@ -46,11 +51,16 @@ export default function JourneyCard({
   description,
   Icon,
   accent = "blue",
+  offset = false,
 }: JourneyCardProps) {
   const styles = ACCENT_STYLES[accent];
 
   return (
-    <div className="relative pt-2">
+    <div
+      className={`relative pt-2 transition-transform duration-300 ${
+        offset ? "lg:translate-y-14" : "lg:translate-y-0"
+      }`}
+    >
       {/* Dot that sits on the desktop timeline line */}
       <div
         className={`absolute -top-[26px] left-1/2 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-[#F4F6FF] ${styles.step} lg:block`}
@@ -61,9 +71,11 @@ export default function JourneyCard({
       >
         <div className="flex items-center justify-between">
           <div
-            className={`flex h-14 w-14 items-center justify-center rounded-2xl ${styles.bg}`}
+            className={`icon-pulse-wrap relative flex h-14 w-14 items-center justify-center rounded-2xl ${styles.bg} ${styles.fg}`}
           >
-            <Icon className={`h-7 w-7 ${styles.fg}`} />
+            <span className="icon-pulse-ring" />
+
+            <Icon className={`relative z-10 h-7 w-7 ${styles.fg}`} />
           </div>
 
           <span
