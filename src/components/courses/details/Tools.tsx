@@ -36,19 +36,24 @@ export default function Tools({
           {course.tools.map((tool) => (
             <div
               key={tool}
-              className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-lg"
+              className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-lg"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100">
-                <Check className="h-6 w-6 text-emerald-600" />
+              {/* Left accent bar — appears on hover */}
+              <span className="absolute left-0 top-0 h-full w-1 origin-top scale-y-0 bg-emerald-500 transition-transform duration-300 group-hover:scale-y-100" />
+
+              <div className="icon-pulse-wrap relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600 transition-colors duration-300 group-hover:bg-emerald-600">
+                <span className="icon-pulse-ring" />
+
+                <Check className="relative z-10 h-6 w-6 text-emerald-600 transition-colors duration-300 group-hover:text-white" />
               </div>
 
-              <div>
-                <h3 className="text-lg font-bold text-slate-900">
+              <div className="min-w-0">
+                <h3 className="truncate text-lg font-bold text-slate-900">
                   {tool}
                 </h3>
 
                 <p className="text-sm text-slate-500">
-                  Practical Hands-on Training
+                  Practical hands-on training
                 </p>
               </div>
             </div>

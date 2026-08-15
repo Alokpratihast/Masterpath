@@ -7,8 +7,9 @@ export const pythonCourse: Course = {
 
   category: "Technology",
 
+  // Short summary for Hero section
   summary:
-    "Advanced Python Programming is a comprehensive, industry-focused course designed to help students and professionals master one of the world's most in-demand programming languages. Python is widely used across software development, automation, data analytics, artificial intelligence (AI), machine learning (ML), cloud computing, cybersecurity, web development, and DevOps. This program combines strong programming fundamentals with hands-on projects, enabling learners to build real-world applications and become job-ready.\n\nMasterpath curriculum covers essential and advanced topics including Python Fundamentals, Object-Oriented Programming (OOP), Data Structures & Algorithms, Exception Handling, File Handling, Modules & Packages, Regular Expressions, Multithreading, API Integration, Database Connectivity (SQL), Web Scraping, Automation using Python, Django/Flask Basics, Git & GitHub, Unit Testing, and Real-Time Projects. Students gain practical experience by working on live projects that reflect industry requirements.",
+    "Master Python through hands-on projects, advanced programming concepts, APIs, databases, automation, and real-world application development.",
 
   duration: "3 Months",
 
@@ -34,11 +35,13 @@ export const pythonCourse: Course = {
     "Placement Assistance",
   ],
 
+  // Full description for About Course section
   about:
-    "Advanced Python Programming is a comprehensive, industry-focused course designed to help students and professionals master one of the world's most in-demand programming languages. Python is widely used across software development, automation, data analytics, artificial intelligence (AI), machine learning (ML), cloud computing, cybersecurity, web development, and DevOps. This program combines strong programming fundamentals with hands-on projects, enabling learners to build real-world applications and become job-ready.",
+    "Advanced Python Programming is a comprehensive, industry-focused course designed to help students and professionals build strong Python programming skills and develop real-world applications. The program covers Python fundamentals, advanced programming concepts, APIs, databases, automation, web development, and practical project development. Learners work on hands-on projects designed around real industry requirements.",
 
+  // Detailed curriculum description
   description:
-    "Masterpath curriculum covers essential and advanced topics including Python Fundamentals, Object-Oriented Programming (OOP), Data Structures & Algorithms, Exception Handling, File Handling, Modules & Packages, Regular Expressions, Multithreading, API Integration, Database Connectivity (SQL), Web Scraping, Automation using Python, Django/Flask Basics, Git & GitHub, Unit Testing, and Real-Time Projects. Students gain practical experience by working on live projects that reflect industry requirements.",
+    "Masterpath curriculum covers essential and advanced topics including Python Fundamentals, Object-Oriented Programming (OOP), Data Structures & Algorithms, Exception Handling, File Handling, Modules & Packages, Regular Expressions, Multithreading, API Integration, Database Connectivity (SQL), Web Scraping, Automation using Python, Django/Flask Basics, Git & GitHub, Unit Testing, and Real-Time Projects. Students gain practical experience by working on projects that reflect real-world industry requirements.",
 
   learning: [
     "Python Fundamentals",
@@ -87,7 +90,7 @@ export const pythonCourse: Course = {
   ],
 
   certification:
-    "Industry-recognized Python Certification after successful completion.",
+    "Industry-recognized Python Certification after successful completion of the course.",
 
   placementSupport: [
     "Resume Building",
