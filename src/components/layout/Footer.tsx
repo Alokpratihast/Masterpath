@@ -78,7 +78,7 @@ export function Footer() {
               aria-label={`${siteConfig.name} home`}
             >
               <Image
-                src="/images/logo/newlogo1.png"
+                src="/images/logo/newlog2.png"
                 alt={siteConfig.name}
                 width={170}
                 height={58}

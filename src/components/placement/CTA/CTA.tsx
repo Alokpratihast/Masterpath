@@ -132,7 +132,7 @@ export default function CTA() {
 
         <div className="mt-12 flex flex-col items-center justify-center gap-5 sm:flex-row">
           <Link
-            href="/contact"
+            href="/contact#contact-form"
             className="group inline-flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl"
           >
             Book Free Counselling
@@ -154,13 +154,13 @@ export default function CTA() {
           <div className="flex items-center gap-3">
             <Phone className="h-5 w-5 text-blue-400" />
 
-            <span>+91 99999 99999</span>
+            <span>+917026543916 </span>
           </div>
 
           <div className="flex items-center gap-3">
             <Mail className="h-5 w-5 text-blue-400" />
 
-            <span>info@nfsmasterpath.com</span>
+            <span>hr@nfsmasterpath.com</span>
           </div>
         </div>
       </div>

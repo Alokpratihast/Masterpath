@@ -45,7 +45,7 @@ export default function FinalCTA() {
             </Link>
 
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="inline-flex items-center justify-center rounded-xl border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur transition hover:bg-white/20"
             >
               Book Free Counselling

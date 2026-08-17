@@ -12,12 +12,12 @@ export const homeHero = {
 
   primaryButton: {
     label: "Explore Courses",
-    href: "#courses",
+    href: "/courses",
   },
 
   secondaryButton: {
     label: "Book Free Counselling",
-    href: "/contact",
+    href:"/contact#contact-form",
   },
 
   features: [
