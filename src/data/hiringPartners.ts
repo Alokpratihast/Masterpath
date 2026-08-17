@@ -2,41 +2,41 @@ export const hiringPartners = [
   {
     id: 1,
     name: "Amazon",
-    logo: "/companies/amazon.svg",
+    logo: "/images/hiringpartner/7.png",
   },
   {
     id: 2,
     name: "Infosys",
-    logo: "/companies/infosys.svg",
+    logo: "/images/hiringpartner/4.png",
   },
   {
     id: 3,
     name: "TCS",
-    logo: "/companies/tcs.svg",
+    logo: "/images/hiringpartner/1.png",
   },
   {
     id: 4,
     name: "Accenture",
-    logo: "/companies/accenture.svg",
+    logo: "/images/hiringpartner/10.png",
   },
   {
     id: 5,
     name: "IBM",
-    logo: "/companies/ibm.svg",
+    logo: "/images/hiringpartner/2.png",
   },
   {
     id: 6,
     name: "Capgemini",
-    logo: "/companies/capgemini.svg",
+    logo: "/images/hiringpartner/9.png",
   },
   {
     id: 7,
     name: "Cognizant",
-    logo: "/companies/cognizant.svg",
+    logo: "/images/hiringpartner/8.png",
   },
   {
     id: 8,
     name: "Wipro",
-    logo: "/companies/wipro.svg",
+    logo: "/images/hiringpartner/6.png",
   },
 ];

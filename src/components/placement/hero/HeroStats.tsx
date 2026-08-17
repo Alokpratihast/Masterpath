@@ -25,7 +25,7 @@ const stats = [
     accent: "blue",
   },
   {
-    value: "300+",
+    value: "30+",
     label: "Hiring Partners",
     icon: BriefcaseBusiness,
     accent: "amber",

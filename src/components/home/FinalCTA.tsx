@@ -59,7 +59,7 @@ export default function FinalCTA() {
               <GraduationCap className="mx-auto h-10 w-10 text-emerald-300" />
 
               <h3 className="mt-5 text-5xl font-black">
-                5000+
+                500+
               </h3>
 
               <p className="mt-2 text-blue-100">

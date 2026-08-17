@@ -1,40 +1,4 @@
-// import type { LucideIcon } from "lucide-react";
 
-// type AboutFeatureProps = {
-//   Icon: LucideIcon;
-//   title: string;
-//   description: string;
-// };
-
-// export default function AboutFeature({
-//   Icon,
-//   title,
-//   description,
-// }: AboutFeatureProps) {
-//   return (
-//     <div className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/40">
-
-//       <div className="flex items-start gap-4">
-
-//         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 transition-colors group-hover:bg-blue-600">
-//           <Icon className="h-6 w-6 text-blue-600 transition-colors group-hover:text-white" />
-//         </div>
-
-//         <div>
-//           <h3 className="text-base font-black text-slate-900">
-//             {title}
-//           </h3>
-
-//           <p className="mt-2 text-sm leading-6 text-slate-600">
-//             {description}
-//           </p>
-//         </div>
-
-//       </div>
-
-//     </div>
-//   );
-// }
 
 import type { LucideIcon } from "lucide-react";
 

@@ -1,12 +1,12 @@
 export const placementStats = [
   {
     id: 1,
-    value: "5000+",
+    value: "500+",
     label: "Students Trained",
   },
   {
     id: 2,
-    value: "300+",
+    value: "30+",
     label: "Hiring Partners",
   },
   {

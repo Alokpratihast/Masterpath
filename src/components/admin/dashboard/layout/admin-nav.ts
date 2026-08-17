@@ -22,11 +22,7 @@ export const adminNav: AdminNavItem[] = [
     icon: LayoutDashboard,
   },
 
-  {
-    title: "Courses",
-    href: "/admin/courses",
-    icon: BookOpen,
-  },
+  
 
   {
     title: "Contact Messages",
@@ -34,33 +30,7 @@ export const adminNav: AdminNavItem[] = [
     icon: MessageSquare,
   },
 
-  {
-    title: "ADD Leads",
-    href: "/admin/neodove/dashboard",
-    icon: BarChart3,
-  },
+  
 
-  // {
-  //   title: "NeoDove Leads",
-  //   href: "/admin/neodove/leads",
-  //   icon: Users,
-  // },
-
-  // {
-  //   title: "Follow Ups",
-  //   href: "/admin/neodove/followups",
-  //   icon: PhoneCall,
-  // },
-
-  // {
-  //   title: "Tasks",
-  //   href: "/admin/neodove/tasks",
-  //   icon: ClipboardList,
-  // },
-
-  // {
-  //   title: "Settings",
-  //   href: "/admin/settings",
-  //   icon: Settings,
-  // },
+  
 ];

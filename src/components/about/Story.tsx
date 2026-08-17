@@ -38,7 +38,7 @@ export default function Story() {
               <div className="icon-pulse-wrap animate-float relative flex h-36 w-36 items-center justify-center rounded-full bg-white shadow-xl shadow-blue-500/20">
                 <span className="icon-pulse-ring" />
                 <Image
-                  src="/images/logo/newlogo1.png"
+                  src="/images/logo/newlog2.png"
                   alt="MasterPath"
                   width={100}
                   height={100}
@@ -132,7 +132,7 @@ export default function Story() {
 
             <div>
               <h3 className="text-4xl font-black text-blue-700">
-                <CountUp value="5000+" />
+                <CountUp value="500+" />
               </h3>
 
               <p className="mt-2 text-sm text-slate-600">

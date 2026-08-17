@@ -42,7 +42,7 @@ export default function HiringPartners() {
         <div className="mt-20 grid gap-8 rounded-3xl bg-slate-900 px-8 py-10 text-center text-white md:grid-cols-3">
           <div>
             <h3 className="text-5xl font-black text-blue-400">
-              300+
+              30+
             </h3>
             <p className="mt-2 text-slate-300">
               Hiring Partners
@@ -51,7 +51,7 @@ export default function HiringPartners() {
 
           <div>
             <h3 className="text-5xl font-black text-emerald-400">
-              5000+
+              500+
             </h3>
             <p className="mt-2 text-slate-300">
               Students Trained

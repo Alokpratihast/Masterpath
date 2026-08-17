@@ -15,13 +15,13 @@ export const achievements = [
     icon: Award,
   },
   {
-    value: "5000+",
+    value: "500+",
     label: "Students Trained",
     description: "Thousands of learners have successfully completed our programs.",
     icon: Users,
   },
   {
-    value: "300+",
+    value: "30+",
     label: "Hiring Partners",
     description: "Leading companies trust our graduates.",
     icon: BriefcaseBusiness,

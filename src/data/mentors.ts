@@ -10,7 +10,7 @@ export const mentors = [
   },
   {
     id: 2,
-    name: "Priya Verma",
+    name: "Priyansh Verma",
     designation: "Data Science Mentor",
     company: "Ex-Cognizant",
     experience: "8+ Years Experience",
@@ -19,7 +19,7 @@ export const mentors = [
   },
   {
     id: 3,
-    name: "Rahul Singh",
+    name: "Renuka Singh",
     designation: "Cloud & DevOps Trainer",
     company: "AWS Certified",
     experience: "12+ Years Experience",
@@ -28,7 +28,7 @@ export const mentors = [
   },
   {
     id: 4,
-    name: "Neha Gupta",
+    name: "Nikhil Gupta",
     designation: "UI/UX Design Mentor",
     company: "Ex-Adobe",
     experience: "7+ Years Experience",
@@ -46,7 +46,7 @@ export const mentors = [
   },
   {
     id: 6,
-    name: "Sneha Kapoor",
+    name: "Abinav Kapoor",
     designation: "Business & Data Analyst",
     company: "Ex-TCS",
     experience: "8+ Years Experience",

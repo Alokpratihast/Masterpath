@@ -14,8 +14,8 @@ import CountUp from "@/components/home/Countup";
 
 const stats = [
   { value: "5+", label: "Years Experience", icon: Award },
-  { value: "5000+", label: "Students Trained", icon: Users },
-  { value: "300+", label: "Hiring Partners", icon: BriefcaseBusiness },
+  { value: "500+", label: "Students Trained", icon: Users },
+  { value: "30+", label: "Hiring Partners", icon: BriefcaseBusiness },
 ];
 
 export default function Hero() {
