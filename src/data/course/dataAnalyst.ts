@@ -25,6 +25,7 @@ export const dataAnalystCourse: Course = {
   price: "₹64,999",
 
   image: "/images/courses/2.webp",
+  brochure:"/brochures/data-analytic-course.pdf",
 
   highlights: [
     "Portfolio Projects",

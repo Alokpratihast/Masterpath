@@ -25,6 +25,7 @@ export const fullStackCourse: Course = {
   price: "₹64,999",
 
   image: "/images/courses/3.webp",
+  brochure:'/brochures/fullstack.pdf',
 
   highlights: [
     "React",

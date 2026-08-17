@@ -122,6 +122,7 @@ export default function Curriculum({
               <div className="relative rounded-3xl border border-white bg-white/80 p-1 shadow-xl backdrop-blur-sm">
                 <CourseEnquiryForm
                   courseName={course.title}
+                  brochure={course.brochure}
                 />
               </div>
             </div>

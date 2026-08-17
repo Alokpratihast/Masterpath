@@ -14,10 +14,12 @@ import {
 
 type CourseEnquiryFormProps = {
   courseName: string;
+  brochure:string;
 };
 
 export default function CourseEnquiryForm({
   courseName,
+  brochure
 }: CourseEnquiryFormProps) {
   const [loading, setLoading] = useState(false);
 
@@ -59,6 +61,15 @@ export default function CourseEnquiryForm({
           result.message || "Something went wrong"
         );
       }
+
+      const link = document.createElement("a");
+link.href = brochure;
+link.download = "";
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+
+
 
       alert("Enquiry submitted successfully.");
 

@@ -25,6 +25,7 @@ export const digitalMarketingCourse: Course = {
   price: "₹64,999",
   
   image: "/images/courses/6.webp",
+  brochure:"/brochures/digitalmarketing.pdf",
 
   highlights: [
     "Campaign Labs",
