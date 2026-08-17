@@ -22,7 +22,7 @@ export const fullStackCourse: Course = {
 
   featured: true,
 
-  price: "₹45,000",
+  price: "₹64,999",
 
   image: "/images/courses/3.webp",
 

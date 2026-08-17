@@ -22,7 +22,7 @@ export const dataAnalystCourse: Course = {
 
   featured: true,
 
-  price: "₹30,000",
+  price: "₹64,999",
 
   image: "/images/courses/2.webp",
 

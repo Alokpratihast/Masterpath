@@ -6,7 +6,7 @@ export const mentors = [
     company: "Ex-Infosys",
     experience: "10+ Years Experience",
     expertise: ["React", "Next.js", "Node.js"],
-    image: "/mentors/mentor-1.jpg",
+    image: "/images/about/mentor1.png",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const mentors = [
     company: "Ex-Cognizant",
     experience: "8+ Years Experience",
     expertise: ["Python", "SQL", "Power BI"],
-    image: "/mentors/mentor-2.jpg",
+    image: "/images/about/mentor2.png",
   },
   {
     id: 3,
@@ -24,6 +24,6 @@ export const mentors = [
     company: "AWS Certified",
     experience: "12+ Years Experience",
     expertise: ["AWS", "Docker", "Kubernetes"],
-    image: "/mentors/mentor-3.jpg",
+    image: "/images/about/mentor3.png",
   },
 ];

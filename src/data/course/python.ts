@@ -23,7 +23,7 @@ export const pythonCourse: Course = {
 
   featured: true,
 
-  price: "₹25,000",
+  price: "₹64,999",
 
   image: "/images/courses/1.webp",
 

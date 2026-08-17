@@ -10,7 +10,7 @@ export const cmaUsaCourse: Course = {
   summary:
     "The CMA USA program is designed to help students and professionals develop strong knowledge and practical skills in management accounting, financial planning, analysis, budgeting, performance management, risk management, and strategic financial decision-making. The program prepares learners to understand how financial information can be used to support business planning, improve performance, manage costs, and make effective management decisions.\n\nMasterpath training focuses on practical learning, industry-relevant concepts, exam preparation, and career development. By the end of the program, learners will develop the knowledge and confidence required to pursue professional opportunities in management accounting, financial analysis, planning and analysis, corporate finance, and strategic financial management.",
 
-  duration: "3 Months / 1 Level",
+  duration: "3 Months ",
 
   mode: "Hybrid",
 

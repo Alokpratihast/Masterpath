@@ -22,7 +22,7 @@ export const digitalMarketingCourse: Course = {
 
   featured: true,
 
-  price: "₹20,000",
+  price: "₹64,999",
   
   image: "/images/courses/6.webp",
 

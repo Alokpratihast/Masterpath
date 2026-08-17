@@ -22,9 +22,9 @@ export const hrCourse: Course = {
 
   featured: true,
 
-  price: "₹20,000",
+  price: "₹64,999",
 
-  image: "/images/courses/4.webp",
+  image: "/images/courses/8.png",
 
   highlights: [
     "Practical HR Training",
