@@ -31,4 +31,6 @@ export type SoftwareCompany = {
   id: number;
   name: string;
   logo: string;
+  href: string;
+  description?: string;
 };

@@ -375,27 +375,20 @@ export const servicesStats: ServiceStat[] = [
   
 ];
 
-
 export const softwareCompanies: SoftwareCompany[] = [
   {
     id: 1,
-    name: "Company One",
-    logo: "/images/companies/company-one.webp",
+    name: "QuikNest",
+    logo: "/images/clientcompanies/1.png",
+    href: "https://quiknestindia.com/",
+    description: "Property Management Platform",
   },
   {
     id: 2,
-    name: "Company Two",
-    logo: "/images/companies/company-two.webp",
-  },
-  {
-    id: 3,
-    name: "Company Three",
-    logo: "/images/companies/company-three.webp",
-  },
-  {
-    id: 4,
-    name: "Company Four",
-    logo: "/images/companies/company-four.webp",
+    name: "Naghavi Financial",
+    logo: "/images/clientcompanies/2.png",
+    href: "https://naghavifin.com/",
+    description: "Financial Services Platform",
   },
 ];
 

@@ -207,13 +207,13 @@ export function Navbar() {
               DESKTOP CTA BUTTONS
           ====================================================== */}
           <div className="hidden items-center gap-3 xl:flex">
-            {/* Counselling */}
+            {/* Counselling
             <Link
               href="/contact#contact-form"
               className="inline-flex h-12 items-center justify-center rounded-xl border-2 border-slate-300 bg-white px-5 text-sm font-bold text-slate-900 transition-all duration-300 hover:border-slate-400 hover:bg-slate-50"
             >
               Book free counselling
-            </Link>
+            </Link> */}
 
             {/* Enquire */}
             <Link
