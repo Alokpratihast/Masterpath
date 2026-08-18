@@ -32,7 +32,7 @@ export type Course = {
   price: string;
 
   image: string;
-  brochure: string;
+  brochure?: string;
 
   highlights: string[];
 

@@ -14,12 +14,12 @@ import {
 
 type CourseEnquiryFormProps = {
   courseName: string;
-  brochure:string;
+  brochure?:string;
 };
 
 export default function CourseEnquiryForm({
   courseName,
-  brochure
+  brochure,
 }: CourseEnquiryFormProps) {
   const [loading, setLoading] = useState(false);
 
@@ -62,12 +62,14 @@ export default function CourseEnquiryForm({
         );
       }
 
-      const link = document.createElement("a");
-link.href = brochure;
-link.download = "";
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
+      if (brochure) {
+  const link = document.createElement("a");
+  link.href = brochure;
+  link.download = "";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
 
 

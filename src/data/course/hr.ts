@@ -25,6 +25,7 @@ export const hrCourse: Course = {
   price: "₹64,999",
 
   image: "/images/courses/8.png",
+  brochure: "/brochures/hr-training.pdf",
 
   highlights: [
     "Practical HR Training",
