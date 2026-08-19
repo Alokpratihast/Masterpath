@@ -1,8 +1,4 @@
 
-
-
-
-
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -78,11 +74,11 @@ export function Footer() {
               aria-label={`${siteConfig.name} home`}
             >
               <Image
-                src="/images/logo/newlog2.png"
+                src="/images/logo/logo-full-dark.png"
                 alt={siteConfig.name}
-                width={170}
-                height={58}
-                className="h-auto w-[150px] object-contain"
+                width={858}
+                height={307}
+                className="h-[46px] w-auto object-contain"
               />
             </Link>
 

@@ -1,10 +1,11 @@
 export const homeHero = {
-  badge: "5,000+ STUDENTS TRAINED",
+  badge: "1.1k+ STUDENTS TRAINED",
 
   title: {
-    line1: "Build Skills.",
-    line2: "Grow Your Career.",
-    line3: "Get Inhouse Placement.",
+    line1:"Degree is not enough",
+    line2: "Build Skills.",
+    line3: "Grow Your Career.",
+    line4: "Get Inhouse Placement.",
   },
 
   description:
@@ -47,7 +48,7 @@ export const homeHero = {
       icon: "users",
     },
     {
-      value: "54+",
+      value: "30+",
       label: "Hiring Partners",
       icon: "handshake",
     },

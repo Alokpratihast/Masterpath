@@ -15,10 +15,9 @@ export default function Home() {
     <>
       <Hero />
       <WhoWeAre/>
+      <PlacementJourney />
       <FeaturedProgram />
       <WhyChoose />
-      <PlacementJourney />
-      {/* <HiringPartners /> */}
       <StudentAchievements/>
       <Testimonials />
       <FAQ />

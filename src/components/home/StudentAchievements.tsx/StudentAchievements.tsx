@@ -48,14 +48,14 @@ export default function StudentAchievements() {
         {/* Stats */}
         <div className="mx-auto mt-10 flex max-w-3xl flex-wrap items-center justify-center gap-3">
           <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-4 text-center backdrop-blur-md">
-            <p className="text-2xl font-black text-white">100+</p>
+            <p className="text-2xl font-black text-white">1.1k+</p>
             <p className="mt-1 text-xs font-medium text-slate-400">
               Students Trained
             </p>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-4 text-center backdrop-blur-md">
-            <p className="text-2xl font-black text-white">8+</p>
+            <p className="text-2xl font-black text-white">10+</p>
             <p className="mt-1 text-xs font-medium text-slate-400">
               Career Domains
             </p>

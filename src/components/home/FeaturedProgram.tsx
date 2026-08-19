@@ -2,6 +2,7 @@
 
 
 
+
 // "use client";
 
 // import { useMemo, useState } from "react";
@@ -11,6 +12,7 @@
 // import { courses } from "@/data/courses";
 // import CourseCard from "./Coursecard";
 // import ProgramTabs from "./ProgramTabs";
+// import Marquee from "./Marquee";
 // import type { Category } from "@/types/category";
 
 // export default function FeaturedProgram() {
@@ -84,24 +86,20 @@
 //         </div>
 
 //         {/* =====================================================
-//             VALUE STRIP — compact single-line, flat dividers
+//             VALUE STRIP — auto-scrolling marquee
 //         ====================================================== */}
-//         <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 border-y border-[#E5E9F2] py-4 text-sm font-semibold text-[#47536F]">
-//           <div className="flex items-center gap-1.5">
-//             <Sparkles className="h-3.5 w-3.5 text-[#2E5EFF]" />
-//             Industry-focused programs
-//           </div>
+//         <div className="mt-8 flex items-center gap-2 border-y border-[#E5E9F2] py-4">
+//           <Sparkles className="h-3.5 w-3.5 shrink-0 text-[#2E5EFF]" />
 
-//           <span className="hidden h-1 w-1 rounded-full bg-[#C6CEE4] sm:block" />
-//           <div>Real-world projects</div>
-
-//           <span className="hidden h-1 w-1 rounded-full bg-[#C6CEE4] sm:block" />
-//           <div>Expert mentors</div>
-
-//           <span className="hidden h-1 w-1 rounded-full bg-[#C6CEE4] sm:block" />
-//           <div>In-house Placement support</div>
-
-          
+//           <Marquee
+//             items={[
+//               "Industry-focused programs",
+//               "Real-world projects",
+//               "Expert mentors",
+//               "In-house Placement support",
+//             ]}
+//             speed={18}
+//           />
 //         </div>
 
 //         {/* =====================================================
@@ -158,13 +156,16 @@
 
 
 
-
-
 "use client";
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Compass, PackageOpen, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Compass,
+  PackageOpen,
+  Sparkles,
+} from "lucide-react";
 
 import { courses } from "@/data/courses";
 import CourseCard from "./Coursecard";
@@ -173,22 +174,24 @@ import Marquee from "./Marquee";
 import type { Category } from "@/types/category";
 
 export default function FeaturedProgram() {
-  const [activeCategory, setActiveCategory] = useState<Category>("All");
+  const [activeCategory, setActiveCategory] =
+    useState<Category>("All");
 
   const filteredCourses = useMemo(() => {
     let result = courses.filter((course) => course.featured);
 
     if (activeCategory !== "All") {
-      result = result.filter((course) => course.category === activeCategory);
+      result = result.filter(
+        (course) => course.category === activeCategory
+      );
     }
 
     return result;
   }, [activeCategory]);
 
   return (
-    <section className="relative bg-[#FAFBFF] py-20 md:py-28">
-      {/* Flat dot-grid background instead of blurred glow orbs —
-          matches the flat/SaaS direction of the redesign */}
+    <section className="relative bg-[#FAFBFF] py-14 md:py-20">
+      {/* Background */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.5]"
         style={{
@@ -199,12 +202,13 @@ export default function FeaturedProgram() {
       />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* =====================================================
-            HEADER
-        ====================================================== */}
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          {/* Left */}
+
+        {/* ================= HEADER ================= */}
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+
+          {/* Left Content */}
           <div className="max-w-3xl">
+
             {/* Eyebrow */}
             <div className="mb-4 inline-flex items-center gap-2 rounded-md border border-[#DCE4FF] bg-white px-3 py-1.5">
               <Compass className="h-3.5 w-3.5 text-[#2E5EFF]" />
@@ -217,35 +221,37 @@ export default function FeaturedProgram() {
             {/* Heading */}
             <h2 className="max-w-3xl text-3xl font-black leading-[1.15] tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl">
               Still looking for the{" "}
-              <span className="text-[#2E5EFF]">right opportunity?</span>
+              <span className="text-[#2E5EFF]">
+                right opportunity?
+              </span>
             </h2>
 
-            {/* Supporting line */}
+            {/* Description */}
             <p className="mt-4 max-w-2xl text-base leading-7 text-[#5B6685] md:text-lg">
               Learn with us &amp; get{" "}
               <span className="font-bold text-[#0F172A]">
                 in-house placement support.
               </span>{" "}
-              Industry-focused training, real-world projects, expert mentors.
+              Industry-focused training, real-world projects,
+              expert mentors.
             </p>
           </div>
 
-          {/* Right CTA */}
+          {/* CTA */}
           <div className="shrink-0">
             <Link
               href="/courses"
               className="group inline-flex items-center gap-2.5 rounded-lg bg-[#0F172A] px-5 py-3 text-sm font-bold text-white transition-colors duration-200 hover:bg-[#2E5EFF]"
             >
               View all courses
+
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
 
-        {/* =====================================================
-            VALUE STRIP — auto-scrolling marquee
-        ====================================================== */}
-        <div className="mt-8 flex items-center gap-2 border-y border-[#E5E9F2] py-4">
+        {/* ================= VALUE STRIP ================= */}
+        <div className="mt-6 flex items-center gap-2 border-y border-[#E5E9F2] py-3.5">
           <Sparkles className="h-3.5 w-3.5 shrink-0 text-[#2E5EFF]" />
 
           <Marquee
@@ -259,10 +265,8 @@ export default function FeaturedProgram() {
           />
         </div>
 
-        {/* =====================================================
-            CATEGORY TABS
-        ====================================================== */}
-        <div className="mt-8 flex justify-center">
+        {/* ================= CATEGORY TABS ================= */}
+        <div className="mt-6 flex justify-center">
           <div className="rounded-lg border border-[#E5E9F2] bg-white p-1">
             <ProgramTabs
               activeCategory={activeCategory}
@@ -271,20 +275,20 @@ export default function FeaturedProgram() {
           </div>
         </div>
 
-        {/* =====================================================
-            COURSE CARDS
-        ====================================================== */}
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {/* ================= COURSE CARDS ================= */}
+        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {filteredCourses.map((course) => (
-            <CourseCard key={course.slug} course={course} />
+            <CourseCard
+              key={course.slug}
+              course={course}
+            />
           ))}
         </div>
 
-        {/* =====================================================
-            EMPTY STATE
-        ====================================================== */}
+        {/* ================= EMPTY STATE ================= */}
         {filteredCourses.length === 0 && (
-          <div className="mt-10 rounded-xl border border-[#E5E9F2] bg-white p-12 text-center md:p-16">
+          <div className="mt-8 rounded-xl border border-[#E5E9F2] bg-white p-12 text-center md:p-16">
+
             <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-[#EAF0FF] text-[#2E5EFF]">
               <PackageOpen className="h-6 w-6" />
             </div>
@@ -294,7 +298,8 @@ export default function FeaturedProgram() {
             </h3>
 
             <p className="mx-auto mt-2 max-w-md text-[#68738E]">
-              We&apos;re working on adding more programs in this category.
+              We&apos;re working on adding more programs in this
+              category.
             </p>
 
             <button

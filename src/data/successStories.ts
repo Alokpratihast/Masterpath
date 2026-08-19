@@ -12,7 +12,7 @@ export const successStories = [
 
   {
     id: 2,
-    name: "Priya Verma",
+    name: "Priyam Verma",
     course: "Data Analyst",
     company: "Accenture",
     package: "7.2 LPA",
@@ -45,7 +45,7 @@ export const successStories = [
 
   {
     id: 5,
-    name: "Arjun Mehta",
+    name: "Aarohi Mehta",
     course: "Data Science",
     company: "TCS",
     package: "7.5 LPA",

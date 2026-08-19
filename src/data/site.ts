@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "NFS Masterpath",
   phone: "+917026543916",
   email: "hr@nfs-masterpath.com",
-  address: "15th Main Rd, 3rd Stage, 4th Block, Sahakar Nagar",
+  address: "Banglore.Ofline-center",
   whatsappUrl: "https://wa.me/917026543916",
 };
 
@@ -20,5 +20,5 @@ export const navLinks = [
   { label: "Placement", href: "/placement" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
-  {label:"services", href: "/services"}
+  {label:"Our services", href: "/services"}
 ];

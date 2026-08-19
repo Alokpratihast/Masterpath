@@ -14,7 +14,7 @@ export const testimonials = [
 
   {
     id: 2,
-    name: "Priya Verma",
+    name: "Priyam Verma",
     role: "Data Analyst",
     company: "Cognizant",
     course: "Data Analyst",
@@ -53,7 +53,7 @@ export const testimonials = [
 
   {
     id: 5,
-    name: "Arjun Mehta",
+    name: "Aarohi Mehta",
     role: "Data Analyst",
     company: "Wipro",
     course: "Data Analytics",

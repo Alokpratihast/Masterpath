@@ -1,9 +1,10 @@
 
 
+"use client";
 import Link from "next/link";
 import { ArrowRight, Award } from "lucide-react";
 
-import { homeHero } from "@/data/homeHero";
+import { homeHero } from "../../data/homeHero";
 
 import HeroVisual from "./HeroVisual";
 import HeroFeatures from "./HeroFeatures";
@@ -49,7 +50,11 @@ export default function Hero() {
 
             {/* Heading */}
             <h1 className="max-w-[620px] text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[56px] xl:text-[60px]">
-              {homeHero.title.line1}
+              <span className="relative inline-block text-white/40">
+                {homeHero.title.line1.split(" ")[0]}
+                <span className="absolute left-0 top-1/2 h-[3px] w-full -translate-y-1/2 rounded-full bg-[#FF5C5C]" />
+              </span>{" "}
+              {homeHero.title.line1.split(" ").slice(1).join(" ")}
               <br />
               {homeHero.title.line2}
               <br />
@@ -59,9 +64,14 @@ export default function Hero() {
                   {homeHero.title.line3}
                 </span>
 
-                <span className="absolute -bottom-2 left-0 h-1 w-2/3 rounded-full bg-gradient-to-r from-[#FFB020] to-[#FFD37A]" />
+                <span className="absolute -bottom-2 left-0 h-1 w-2/3 rounded-full bg-gradient-to-r from-[#FFB020] to-[#FFD37A] shadow-[0_0_12px_3px_rgba(255,176,32,0.45)]" />
               </span>
+              <br />
+              {homeHero.title.line4}
+            
             </h1>
+
+
 
             {/* Description */}
             <p className="mt-5 max-w-xl text-base leading-7 text-slate-300 sm:text-lg">
