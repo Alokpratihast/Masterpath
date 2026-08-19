@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "NFS Masterpath",
   phone: "+917026543916",
   email: "hr@nfs-masterpath.com",
-  address: "Banglore.Ofline-center",
+  address: "Banglore||Offline-center",
   whatsappUrl: "https://wa.me/917026543916",
 };
 

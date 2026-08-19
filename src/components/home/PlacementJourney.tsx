@@ -120,13 +120,14 @@ export default function PlacementJourney() {
           </span>
 
           <h2 className="mt-5 text-4xl font-black leading-[1.15] tracking-tight text-[#0F172A] md:text-5xl lg:text-[52px]">
-            Your journey from learning
-            <br />
-            to getting{" "}
-            <span className="bg-gradient-to-r from-[#2E5EFF] to-[#16C79A] bg-clip-text text-transparent">
-              InHouseHired
-            </span>
-          </h2>
+  Your journey <br />
+  In Masterpath <br />
+  from learning <br />
+  to getting{" "}
+  <span className="bg-gradient-to-r from-[#2E5EFF] to-[#16C79A] bg-clip-text text-transparent">
+    InHouse Hired
+  </span>
+</h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[#4B5675]">
             We support you throughout every stage of your career journey —
