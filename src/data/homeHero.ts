@@ -3,7 +3,7 @@ export const homeHero = {
 
   title: {
     line1:"Degree is not enough",
-    line2: "Build Skills.",
+    line2: " To build Skills.",
     line3: "Grow Your Career.",
     line4: "Get Inhouse Placement.",
   },

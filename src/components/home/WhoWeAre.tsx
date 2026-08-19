@@ -47,7 +47,7 @@ const credentials: {
     hoverBg: "group-hover:bg-[#16C79A]",
   },
   {
-    value: "20+",
+    value: "10+",
     label: "Job-ready programs",
     Icon: GraduationCap,
     bg: "bg-[#2E5EFF]/15",
