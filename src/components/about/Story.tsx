@@ -38,7 +38,7 @@ export default function Story() {
               <div className="icon-pulse-wrap animate-float relative flex h-36 w-36 items-center justify-center rounded-full bg-white shadow-xl shadow-blue-500/20">
                 <span className="icon-pulse-ring" />
                 <Image
-                  src="/images/logo/newlog2.png"
+                  src="/images/logo/logo.png"
                   alt="MasterPath"
                   width={100}
                   height={100}
@@ -47,7 +47,7 @@ export default function Story() {
               </div>
 
               <h3 className="mt-8 text-4xl font-black text-white">
-                <CountUp value="13+" /> Years
+                <CountUp value="5+" /> Years
               </h3>
 
               <p className="mt-4 max-w-sm leading-8 text-slate-300">
@@ -122,7 +122,7 @@ export default function Story() {
           <div className="mt-12 grid grid-cols-3 gap-6 border-t border-slate-200 pt-10">
             <div>
               <h3 className="text-4xl font-black text-blue-700">
-                <CountUp value="13+" />
+                <CountUp value="5+" />
               </h3>
 
               <p className="mt-2 text-sm text-slate-600">
@@ -132,7 +132,7 @@ export default function Story() {
 
             <div>
               <h3 className="text-4xl font-black text-blue-700">
-                <CountUp value="500+" />
+                <CountUp value="1.1k+" />
               </h3>
 
               <p className="mt-2 text-sm text-slate-600">
@@ -142,7 +142,7 @@ export default function Story() {
 
             <div>
               <h3 className="text-4xl font-black text-blue-700">
-                <CountUp value="300+" />
+                <CountUp value="30+" />
               </h3>
 
               <p className="mt-2 text-sm text-slate-600">

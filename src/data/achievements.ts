@@ -9,13 +9,13 @@ import {
 
 export const achievements = [
   {
-    value: "7+",
+    value: "5+",
     label: "Years of Excellence",
     description: "Delivering career-focused education since our inception.",
     icon: Award,
   },
   {
-    value: "500+",
+    value: "1.1k+",
     label: "Students Trained",
     description: "Thousands of learners have successfully completed our programs.",
     icon: Users,
@@ -27,7 +27,7 @@ export const achievements = [
     icon: BriefcaseBusiness,
   },
   {
-    value: "20+",
+    value: "10+",
     label: "Professional Courses",
     description: "Industry-focused programs designed for today's market.",
     icon: GraduationCap,

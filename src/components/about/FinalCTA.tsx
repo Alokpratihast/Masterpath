@@ -90,7 +90,7 @@ export default function FinalCTA() {
             </div>
 
             <h3 className="mt-5 text-5xl font-black text-white">
-              <CountUp value="500+" />
+              <CountUp value="1.1k+" />
             </h3>
 
             <p className="mt-2 text-blue-100">
@@ -105,7 +105,7 @@ export default function FinalCTA() {
             </div>
 
             <h3 className="mt-5 text-5xl font-black text-white">
-              <CountUp value="300+" />
+              <CountUp value="30+" />
             </h3>
 
             <p className="mt-2 text-blue-100">
