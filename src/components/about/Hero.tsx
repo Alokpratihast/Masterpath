@@ -14,7 +14,7 @@ import CountUp from "@/components/home/Countup";
 
 const stats = [
   { value: "5+", label: "Years Experience", icon: Award },
-  { value: "1.1+", label: "Students Trained", icon: Users },
+  { value: "1.1K+", label: "Students Trained", icon: Users },
   { value: "30+", label: "Hiring Partners", icon: BriefcaseBusiness },
 ];
 

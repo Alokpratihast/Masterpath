@@ -48,7 +48,7 @@ export default function Testimonials() {
             </div>
 
             <span className="text-sm font-bold text-[#0F172A]">
-              4.8/5 · 1.1+ student reviews
+              4.8/5 · 1.1K+ student reviews
             </span>
           </div>
         </div>
