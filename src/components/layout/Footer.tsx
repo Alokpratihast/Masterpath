@@ -74,11 +74,11 @@ export function Footer() {
               aria-label={`${siteConfig.name} home`}
             >
               <Image
-                src="/images/logo/logo-full-dark.png"
+                src="/images/logo/logo.png"
                 alt={siteConfig.name}
-                width={858}
-                height={307}
-                className="h-[46px] w-auto object-contain"
+                width={870}
+                height={320}
+                className="h-[50px] w-auto object-contain"
               />
             </Link>
 

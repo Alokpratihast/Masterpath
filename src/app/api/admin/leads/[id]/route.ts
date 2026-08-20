@@ -18,8 +18,7 @@ export async function GET(
   try {
     const { id } = await params;
 
-    const lead =
-      await LeadService.getLeadById(id);
+    const lead = await LeadService.getLeadById(id);
 
     if (!lead) {
       return NextResponse.json(
@@ -44,7 +43,7 @@ export async function GET(
       }
     );
   } catch (error) {
-    console.error(error);
+    console.error("Get Lead API Error:", error);
 
     return NextResponse.json(
       {
@@ -72,8 +71,14 @@ export async function PATCH(
 
     const { status } = body;
 
+    const validStatuses = [
+      "NEW",
+      "CONTACTED",
+      "CLOSED",
+    ] as const;
+
     if (
-      !["NEW", "CONTACTED", "CLOSED"].includes(status)
+      !validStatuses.includes(status)
     ) {
       return NextResponse.json(
         {
@@ -95,7 +100,8 @@ export async function PATCH(
     return NextResponse.json(
       {
         success: true,
-        message: "Lead status updated successfully.",
+        message:
+          "Lead status updated successfully.",
         data: updatedLead,
       },
       {
@@ -103,7 +109,10 @@ export async function PATCH(
       }
     );
   } catch (error) {
-    console.error(error);
+    console.error(
+      "Update Lead API Error:",
+      error
+    );
 
     return NextResponse.json(
       {
@@ -127,6 +136,21 @@ export async function DELETE(
   try {
     const { id } = await params;
 
+    const existingLead =
+      await LeadService.getLeadById(id);
+
+    if (!existingLead) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Lead not found.",
+        },
+        {
+          status: 404,
+        }
+      );
+    }
+
     await LeadService.deleteLead(id);
 
     return NextResponse.json(
@@ -139,7 +163,10 @@ export async function DELETE(
       }
     );
   } catch (error) {
-    console.error(error);
+    console.error(
+      "Delete Lead API Error:",
+      error
+    );
 
     return NextResponse.json(
       {

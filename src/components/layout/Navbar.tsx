@@ -1,6 +1,3 @@
-
-
-
 "use client";
 
 import Link from "next/link";
@@ -45,8 +42,8 @@ const SOCIAL_ICON_MAP: Record<
   Facebook: { icon: FaFacebookF, hover: "hover:bg-[#1877F2]" },
   Instagram: { icon: FaInstagram, hover: "hover:bg-[#E1306C]" },
   LinkedIn: { icon: FaLinkedinIn, hover: "hover:bg-[#0A66C2]" },
-  X: { icon: FaXTwitter, hover: "hover:bg-white/20" },
-  Twitter: { icon: FaXTwitter, hover: "hover:bg-white/20" },
+  X: { icon: FaXTwitter, hover: "hover:bg-slate-100" },
+  Twitter: { icon: FaXTwitter, hover: "hover:bg-slate-100" },
   YouTube: { icon: FaYoutube, hover: "hover:bg-[#FF0000]" },
 };
 
@@ -58,30 +55,30 @@ export function Navbar() {
       {/* =========================================================
           TOP INFO BAR
       ========================================================== */}
-      <div className="hidden border-b border-white/[0.06] bg-[#050505] text-white/60 sm:block">
+      <div className="hidden border-b border-slate-200 bg-white text-slate-600 sm:block">
         <div className="mx-auto flex h-10 max-w-7xl items-center justify-between gap-4 px-4 text-[12.5px] font-medium sm:px-6 lg:px-8">
           {/* Left */}
           <div className="flex min-w-0 flex-1 items-center gap-5 lg:gap-6">
             {/* Location */}
             <span className="hidden min-w-0 max-w-[480px] items-center gap-2 md:inline-flex lg:max-w-[520px]">
-              <MapPin className="h-3.5 w-3.5 shrink-0 text-[#4C7CFF]" />
+              <MapPin className="h-3.5 w-3.5 shrink-0 text-[#0B5FAE]" />
 
-              <span className="truncate whitespace-nowrap text-white/55">
+              <span className="truncate whitespace-nowrap text-slate-600">
                 {siteConfig.address}
               </span>
             </span>
 
             {/* Divider */}
-            <span className="hidden h-3.5 w-px shrink-0 bg-white/10 md:block" />
+            <span className="hidden h-3.5 w-px shrink-0 bg-slate-200 md:block" />
 
             {/* Email */}
             <a
-              className="inline-flex min-w-0 max-w-[200px] shrink items-center gap-2 transition-colors hover:text-white"
+              className="inline-flex min-w-0 max-w-[200px] shrink items-center gap-2 transition-colors hover:text-[#0B5FAE]"
               href={`mailto:${siteConfig.email}`}
             >
-              <Send className="h-3.5 w-3.5 shrink-0 text-[#2FD9A8]" />
+              <Send className="h-3.5 w-3.5 shrink-0 text-[#0B5FAE]" />
 
-              <span className="truncate text-white/55">
+              <span className="truncate text-slate-600">
                 {siteConfig.email}
               </span>
             </a>
@@ -90,13 +87,13 @@ export function Navbar() {
           {/* Right */}
           <div className="flex shrink-0 items-center gap-4 lg:gap-5">
             {/* Hiring Partners */}
-            <span className="hidden shrink-0 items-center gap-1.5 rounded-full bg-white/[0.07] px-3 py-1 text-[11.5px] font-bold tracking-wide text-white md:inline-flex">
+            <span className="hidden shrink-0 items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-[11.5px] font-bold tracking-wide text-slate-700 md:inline-flex">
               <Briefcase className="h-3 w-3 text-[#FFB020]" />
               30+ hiring partners
             </span>
 
             {/* Divider */}
-            <span className="hidden h-3.5 w-px shrink-0 bg-white/10 md:block" />
+            <span className="hidden h-3.5 w-px shrink-0 bg-slate-200 md:block" />
 
             {/* Social Links */}
             <div className="hidden shrink-0 items-center gap-1.5 md:flex">
@@ -112,7 +109,7 @@ export function Navbar() {
                     target="_blank"
                     rel="noreferrer"
                     className={cn(
-                      "grid h-[26px] w-[26px] place-items-center rounded-full text-white/60 transition-all duration-200 hover:-translate-y-0.5 hover:text-white",
+                      "grid h-[26px] w-[26px] place-items-center rounded-full bg-slate-100 text-slate-500 transition-all duration-200 hover:-translate-y-0.5 hover:text-white",
                       entry.hover,
                     )}
                     aria-label={link.label}
@@ -124,11 +121,11 @@ export function Navbar() {
             </div>
 
             {/* Divider */}
-            <span className="hidden h-3.5 w-px shrink-0 bg-white/10 md:block" />
+            <span className="hidden h-3.5 w-px shrink-0 bg-slate-200 md:block" />
 
             {/* Phone */}
             <a
-              className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap font-bold text-white transition-colors hover:text-[#4C7CFF]"
+              className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap font-bold text-slate-900 transition-colors hover:text-[#0B5FAE]"
               href={`tel:${siteConfig.phone.replaceAll(" ", "")}`}
             >
               <Phone className="h-3.5 w-3.5 shrink-0" />
@@ -141,7 +138,7 @@ export function Navbar() {
       {/* =========================================================
           MAIN NAVBAR
       ========================================================== */}
-      <div className="border-b border-white/10 bg-[#050505]">
+      <div className="border-b border-slate-200 bg-white">
         <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:h-[76px] lg:px-8">
           {/* =====================================================
               LOGO
@@ -163,12 +160,12 @@ export function Navbar() {
 
             {/* Full lockup (icon + wordmark) on desktop */}
             <Image
-              src="/images/logo/logo-full.png"
+              src="/images/logo/logo.png"
               alt="MasterPath"
-              width={858}
-              height={307}
+              width={860}
+              height={310}
               priority
-              className="hidden h-[42px] w-auto object-contain lg:block"
+              className="hidden h-[45px] w-auto object-contain lg:block"
             />
           </Link>
 
@@ -182,20 +179,20 @@ export function Navbar() {
                 <div className="group relative" key={link.href}>
                   <Link
                     href={link.href}
-                    className="inline-flex h-12 items-center gap-1.5 rounded-xl px-4 text-base font-semibold text-white transition hover:bg-white/10 hover:text-white"
+                    className="inline-flex h-12 items-center gap-1.5 rounded-xl px-4 text-base font-semibold text-slate-700 transition hover:bg-[#EAF0FF] hover:text-[#0B5FAE]"
                   >
                     Our Courses
 
-                    <ChevronDown className="h-4 w-4 text-white/60 transition-transform duration-300 group-hover:rotate-180" />
+                    <ChevronDown className="h-4 w-4 text-slate-400 transition-transform duration-300 group-hover:rotate-180 group-hover:text-[#0B5FAE]" />
                   </Link>
 
                   {/* =================================================
                       COURSES MEGA MENU
                   ================================================== */}
-                  <div className="invisible absolute left-1/2 top-full w-[440px] -translate-x-1/2 translate-y-4 rounded-2xl border border-white/10 bg-[#0B0B0B] p-3 opacity-0 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.55)] transition-all duration-200 group-hover:visible group-hover:translate-y-3 group-hover:opacity-100">
+                  <div className="invisible absolute left-1/2 top-full w-[440px] -translate-x-1/2 translate-y-4 rounded-2xl border border-slate-200 bg-white p-3 opacity-0 shadow-[0_24px_60px_-20px_rgba(15,23,42,0.25)] transition-all duration-200 group-hover:visible group-hover:translate-y-3 group-hover:opacity-100">
                     {/* Header */}
-                    <div className="mb-2 flex items-center justify-between border-b border-white/10 px-3 pb-3">
-                      <span className="inline-flex items-center gap-1.5 text-sm font-black text-white">
+                    <div className="mb-2 flex items-center justify-between border-b border-slate-200 px-3 pb-3">
+                      <span className="inline-flex items-center gap-1.5 text-sm font-black text-slate-900">
                         <Sparkles className="h-4 w-4 text-[#FFB020]" />
                         Popular courses
                       </span>
@@ -212,14 +209,14 @@ export function Navbar() {
                         <Link
                           key={course.slug}
                           href={`/courses/${course.slug}`}
-                          className="group/item flex items-center justify-between gap-3 rounded-xl px-3 py-3 transition hover:bg-white/10"
+                          className="group/item flex items-center justify-between gap-3 rounded-xl px-3 py-3 transition hover:bg-[#EAF0FF]"
                         >
                           <div>
-                            <span className="block text-sm font-black text-white transition-colors group-hover/item:text-white">
+                            <span className="block text-sm font-black text-slate-900 transition-colors group-hover/item:text-[#0B5FAE]">
                               {course.title}
                             </span>
 
-                            <span className="mt-1 block text-xs leading-5 text-white/55">
+                            <span className="mt-1 block text-xs leading-5 text-slate-600">
                               {course.duration} · {course.mode}
                             </span>
                           </div>
@@ -243,7 +240,7 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="inline-flex h-12 items-center rounded-xl px-4 text-base font-semibold text-white transition hover:bg-white/10 hover:text-white"
+                  className="inline-flex h-12 items-center rounded-xl px-4 text-base font-semibold text-slate-700 transition hover:bg-[#EAF0FF] hover:text-[#0B5FAE]"
                 >
                   {link.label}
                 </Link>
@@ -258,7 +255,7 @@ export function Navbar() {
             {/* Enquire */}
             <Link
               href="/contact#contact-form"
-              className="inline-flex h-12 items-center justify-center rounded-xl bg-white px-5 text-sm font-black text-black shadow-[0_8px_20px_-6px_rgba(255,255,255,0.20)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/90 hover:shadow-[0_12px_25px_-6px_rgba(255,255,255,0.28)]"
+              className="inline-flex h-12 items-center justify-center rounded-xl bg-[#0E5FAF] px-5 text-sm font-black text-white shadow-[0_8px_20px_-6px_rgba(14,95,175,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0A4F91] hover:shadow-[0_12px_25px_-6px_rgba(14,95,175,0.40)]"
             >
               Enquire now →
             </Link>
@@ -271,7 +268,7 @@ export function Navbar() {
             {/* Phone */}
             <a
               href={`tel:${siteConfig.phone.replaceAll(" ", "")}`}
-              className="grid h-10 w-10 place-items-center rounded-xl border border-white/15 bg-white/5 text-white transition hover:border-white/30 hover:bg-white/10 sm:h-11 sm:w-11"
+              className="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-slate-50 text-slate-900 transition hover:border-[#0B5FAE]/30 hover:bg-[#EAF0FF] hover:text-[#0B5FAE] sm:h-11 sm:w-11"
               aria-label={`Call ${siteConfig.phone}`}
             >
               <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -279,7 +276,7 @@ export function Navbar() {
 
             {/* Menu */}
             <button
-              className="grid h-10 w-10 place-items-center rounded-xl border border-white/15 bg-white/5 text-white transition hover:border-white/30 hover:bg-white/10 sm:h-11 sm:w-11"
+              className="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-slate-50 text-slate-900 transition hover:border-[#0B5FAE]/30 hover:bg-[#EAF0FF] hover:text-[#0B5FAE] sm:h-11 sm:w-11"
               onClick={() => setOpen((value) => !value)}
               aria-label="Toggle menu"
               aria-expanded={open}
@@ -299,7 +296,7 @@ export function Navbar() {
       ========================================================== */}
       <div
         className={cn(
-          "border-t border-white/10 bg-[#050505] px-4 pb-5 shadow-lg lg:hidden",
+          "border-t border-slate-200 bg-white px-4 pb-5 shadow-lg lg:hidden",
           open ? "block" : "hidden",
         )}
       >
@@ -310,32 +307,32 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="rounded-xl px-3 py-3 text-sm font-bold text-white transition hover:bg-white/10 hover:text-white"
+              className="rounded-xl px-3 py-3 text-sm font-bold text-slate-700 transition hover:bg-[#EAF0FF] hover:text-[#0B5FAE]"
             >
               {link.label === "Courses" ? "Our Courses" : link.label}
             </Link>
           ))}
 
           {/* Hiring Partners */}
-          <span className="mt-1 inline-flex w-fit items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-[#B87700]">
+          <span className="mt-1 inline-flex w-fit items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-[#B87700]">
             <Briefcase className="h-3.5 w-3.5" />
             30+ hiring partners
           </span>
 
           {/* Contact Info */}
-          <div className="mt-2 flex flex-col gap-2 border-t border-white/10 pt-3 text-sm text-white/60">
+          <div className="mt-2 flex flex-col gap-2 border-t border-slate-200 pt-3 text-sm text-slate-600">
             {/* Location */}
             <span className="inline-flex items-center gap-2">
-              <MapPin className="h-4 w-4 shrink-0 text-[#2E5EFF]" />
+              <MapPin className="h-4 w-4 shrink-0 text-[#0B5FAE]" />
               {siteConfig.address}
             </span>
 
             {/* Email */}
             <a
-              className="inline-flex items-center gap-2"
+              className="inline-flex items-center gap-2 hover:text-[#0B5FAE]"
               href={`mailto:${siteConfig.email}`}
             >
-              <Send className="h-4 w-4 shrink-0 text-[#2E5EFF]" />
+              <Send className="h-4 w-4 shrink-0 text-[#0B5FAE]" />
               {siteConfig.email}
             </a>
           </div>
@@ -344,7 +341,7 @@ export function Navbar() {
           <Link
             href="/contact#contact-form"
             onClick={() => setOpen(false)}
-            className="mt-3 inline-flex h-11 items-center justify-center rounded-xl bg-white px-5 text-sm font-black text-black transition hover:bg-white/90"
+            className="mt-3 inline-flex h-11 items-center justify-center rounded-xl bg-[#0E5FAF] px-5 text-sm font-black text-white transition hover:bg-[#0A4F91]"
           >
             Enquire now
           </Link>

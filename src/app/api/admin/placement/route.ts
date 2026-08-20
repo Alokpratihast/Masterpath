@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 
-import { LeadService } from "@/services/lead.service";
+import { PlacementService } from "@/services/placement.service";
+import type { PlacementApplicationStatus } from "@/types/placement";
 
-type LeadStatus = "NEW" | "CONTACTED" | "CLOSED";
-
-const validStatuses: LeadStatus[] = [
+const validStatuses: PlacementApplicationStatus[] = [
   "NEW",
-  "CONTACTED",
-  "CLOSED",
+  "REVIEWED",
+  "SHORTLISTED",
+  "REJECTED",
 ];
 
 export async function GET(request: NextRequest) {
@@ -16,8 +16,7 @@ export async function GET(request: NextRequest) {
 
     const pageParam = searchParams.get("page");
     const limitParam = searchParams.get("limit");
-    const search =
-      searchParams.get("search")?.trim() || undefined;
+    const search = searchParams.get("search")?.trim() || undefined;
     const statusParam = searchParams.get("status");
 
     const page = pageParam ? Number(pageParam) : 1;
@@ -54,18 +53,19 @@ export async function GET(request: NextRequest) {
     }
 
     // Validate status
-    let status: LeadStatus | undefined;
+    let status: PlacementApplicationStatus | undefined;
 
     if (statusParam) {
       if (
         !validStatuses.includes(
-          statusParam as LeadStatus
+          statusParam as PlacementApplicationStatus
         )
       ) {
         return NextResponse.json(
           {
             success: false,
-            message: "Invalid lead status.",
+            message:
+              "Invalid placement application status.",
           },
           {
             status: 400,
@@ -73,11 +73,12 @@ export async function GET(request: NextRequest) {
         );
       }
 
-      status = statusParam as LeadStatus;
+      status =
+        statusParam as PlacementApplicationStatus;
     }
 
     const result =
-      await LeadService.getContactLeads({
+      await PlacementService.getApplications({
         page,
         limit,
         search,
@@ -87,8 +88,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       {
         success: true,
-        message: "Contact leads fetched successfully.",
-        data: result.leads,
+        data: result.applications,
         pagination: result.pagination,
       },
       {
@@ -97,14 +97,15 @@ export async function GET(request: NextRequest) {
     );
   } catch (error) {
     console.error(
-      "Contact Leads API Error:",
+      "Admin Placement Applications API Error:",
       error
     );
 
     return NextResponse.json(
       {
         success: false,
-        message: "Failed to fetch contact leads.",
+        message:
+          "Failed to fetch placement applications.",
       },
       {
         status: 500,

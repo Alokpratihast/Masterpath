@@ -1,12 +1,7 @@
 import {
   LayoutDashboard,
-  Users,
-  BookOpen,
-  Settings,
   MessageSquare,
-  BarChart3,
   ClipboardList,
-  PhoneCall,
 } from "lucide-react";
 
 export type AdminNavItem = {
@@ -22,15 +17,15 @@ export const adminNav: AdminNavItem[] = [
     icon: LayoutDashboard,
   },
 
-  
-
   {
     title: "Contact Messages",
     href: "/admin/contact",
     icon: MessageSquare,
   },
 
-  
-
-  
+  {
+    title: "Placement Applications",
+    href: "/admin/placement",
+    icon: ClipboardList,
+  },
 ];

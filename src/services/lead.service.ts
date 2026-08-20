@@ -48,7 +48,173 @@ export class LeadService {
   }
 
   /**
+   * Get paginated contact leads
+   *
+   * Supports:
+   * - Pagination
+   * - Search
+   * - Status filter
+   *
+   * Only CONTACT type leads are returned.
+   */
+  static async getContactLeads({
+    page = 1,
+    limit = 10,
+    search,
+    status,
+  }: {
+    page?: number;
+    limit?: number;
+    search?: string;
+    status?: LeadStatus;
+  } = {}) {
+    // Normalize pagination values
+    const currentPage = Math.max(1, Math.floor(page));
+
+    const pageSize = Math.min(
+      50,
+      Math.max(1, Math.floor(limit))
+    );
+
+    const skip = (currentPage - 1) * pageSize;
+
+    // Normalize search value
+    const searchValue = search?.trim();
+
+    // Build Prisma where condition
+    const where = {
+      // IMPORTANT:
+      // Contact page should only show CONTACT leads
+      type: "CONTACT" as const,
+
+      ...(status
+        ? {
+            status,
+          }
+        : {}),
+
+      ...(searchValue
+        ? {
+            OR: [
+              {
+                fullName: {
+                  contains: searchValue,
+                },
+              },
+              {
+                email: {
+                  contains: searchValue,
+                },
+              },
+              {
+                phone: {
+                  contains: searchValue,
+                },
+              },
+              {
+                subject: {
+                  contains: searchValue,
+                },
+              },
+              {
+                message: {
+                  contains: searchValue,
+                },
+              },
+            ],
+          }
+        : {}),
+    };
+
+    // Fetch data and total count together
+    const [leads, total] = await prisma.$transaction([
+      prisma.lead.findMany({
+        where,
+        skip,
+        take: pageSize,
+        orderBy: {
+          createdAt: "desc",
+        },
+      }),
+
+      prisma.lead.count({
+        where,
+      }),
+    ]);
+
+    // Calculate total pages
+    const totalPages = Math.ceil(
+      total / pageSize
+    );
+
+    return {
+      leads,
+
+      pagination: {
+        page: currentPage,
+        limit: pageSize,
+        total,
+        totalPages,
+        hasNextPage:
+          currentPage < totalPages,
+        hasPreviousPage:
+          currentPage > 1,
+      },
+    };
+  }
+
+  /**
+ * Contact Lead Statistics
+ *
+ * Only CONTACT leads are counted.
+ */
+static async getContactLeadStats() {
+  const [
+    totalLeads,
+    newLeads,
+    contactedLeads,
+    closedLeads,
+  ] = await prisma.$transaction([
+    prisma.lead.count({
+      where: {
+        type: "CONTACT",
+      },
+    }),
+
+    prisma.lead.count({
+      where: {
+        type: "CONTACT",
+        status: "NEW",
+      },
+    }),
+
+    prisma.lead.count({
+      where: {
+        type: "CONTACT",
+        status: "CONTACTED",
+      },
+    }),
+
+    prisma.lead.count({
+      where: {
+        type: "CONTACT",
+        status: "CLOSED",
+      },
+    }),
+  ]);
+
+  return {
+    totalLeads,
+    newLeads,
+    contactedLeads,
+    closedLeads,
+  };
+}
+
+  /**
    * Get all leads
+   *
+   * Kept for existing server-side usages.
    */
   static async getAllLeads() {
     return await prisma.lead.findMany({
@@ -144,4 +310,9 @@ export class LeadService {
       recentLeads,
     };
   }
+
+
+  
 }
+
+
