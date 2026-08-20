@@ -9,17 +9,17 @@ import {
 
 const stats = [
   {
-    value: "20+",
+    value: "10+",
     label: "Professional Courses",
     icon: GraduationCap,
   },
   {
-    value: "500+",
+    value: "1.1k+",
     label: "Students Trained",
     icon: Users,
   },
   {
-    value: "300+",
+    value: "30+",
     label: "Hiring Partners",
     icon: BriefcaseBusiness,
   },

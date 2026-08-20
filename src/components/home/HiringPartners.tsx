@@ -51,7 +51,7 @@ export default function HiringPartners() {
 
           <div>
             <h3 className="text-5xl font-black text-emerald-400">
-              500+
+              1.1k+
             </h3>
             <p className="mt-2 text-slate-300">
               Students Trained

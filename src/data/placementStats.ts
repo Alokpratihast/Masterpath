@@ -1,7 +1,7 @@
 export const placementStats = [
   {
     id: 1,
-    value: "500+",
+    value: "1.1k+",
     label: "Students Trained",
   },
   {

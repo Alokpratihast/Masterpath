@@ -197,7 +197,7 @@ export default function ServicesHero() {
               <div className="mt-3 grid grid-cols-3 divide-x divide-slate-200 rounded-[1.5rem] border border-slate-100 bg-slate-50/80">
                 <div className="px-3 py-4 text-center">
                   <p className="text-xl font-black text-[#2E5EFF]">
-                    500+
+                    1.1k+
                   </p>
                   <p className="mt-1 text-[10px] font-semibold text-slate-500">
                     Students
@@ -243,7 +243,8 @@ export default function ServicesHero() {
         </div>
       </div>
 
-      {/* Bottom Divider */}
+      
+            {/* Bottom Divider */}
       <div className="relative mx-auto h-px max-w-7xl bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
     </section>
   );

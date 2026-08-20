@@ -19,7 +19,7 @@ const ACCENT_STYLES = {
 
 const stats = [
   {
-    value: "100+",
+    value: "1.1k+",
     label: "Students Trained",
     icon: Users,
     accent: "blue",
@@ -37,7 +37,7 @@ const stats = [
     accent: "mint",
   },
   {
-    value: "20+",
+    value: "10+",
     label: "Professional Courses",
     icon: GraduationCap,
     accent: "coral",

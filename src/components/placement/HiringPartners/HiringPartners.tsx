@@ -125,7 +125,7 @@ export default function HiringPartners() {
           {/* Students */}
           <div className="border-y border-white/10 px-6 py-8 text-center md:border-x md:border-y-0 sm:px-10">
             <h3 className="text-4xl font-black text-[#35D9A8] sm:text-5xl">
-              500+
+              1.1k+
             </h3>
 
             <p className="mt-2 text-sm font-semibold text-slate-300 sm:text-base">

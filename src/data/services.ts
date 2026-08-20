@@ -344,7 +344,7 @@ export const softwareProcess: ProcessStep[] = [
 
 export const servicesStats: ServiceStat[] = [
   {
-    value: "500+",
+    value: "1.1k+",
     label: "Students Trained",
     description:
       "Learners trained through practical, industry-focused programs.",
