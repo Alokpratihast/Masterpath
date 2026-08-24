@@ -1,6 +1,8 @@
 
 
 
+import Image from "next/image";
+
 import {
   Award,
   FolderKanban,
@@ -114,12 +116,19 @@ export default function AboutCourse({
 
             {/* Image */}
 
-            <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-slate-100 shadow-[0_25px_70px_-30px_rgba(15,23,42,0.35)]">
+            <div className="relative h-[300px] overflow-hidden rounded-[28px] border border-slate-200 bg-slate-100 shadow-[0_25px_70px_-30px_rgba(15,23,42,0.35)] sm:h-[360px] lg:h-[400px]">
 
-              <img
+              {/* Lint fix: use Next Image for optimized course artwork. */}
+              <Image
                 src={course.image}
                 alt={course.title}
-                className="h-[300px] w-full object-cover sm:h-[360px] lg:h-[400px]"
+                fill
+                sizes="
+                  (max-width: 640px) 100vw,
+                  (max-width: 1024px) 90vw,
+                  600px
+                "
+                className="object-cover"
               />
 
               {/* Gradient */}

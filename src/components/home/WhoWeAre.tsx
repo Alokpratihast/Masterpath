@@ -83,7 +83,7 @@ export default function WhoWeAre() {
             </span>
 
             <h2 className="mt-6 text-4xl font-black tracking-tight md:text-5xl">
-              Built by mentors who've
+              Built by mentors who&apos;ve
               <br />
               actually done the job.
             </h2>
@@ -91,9 +91,9 @@ export default function WhoWeAre() {
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
               MasterPath was founded with one goal — close the gap between
               classroom learning and what companies actually hire for. Every
-              course is designed and taught by professionals who've worked
+              course is designed and taught by professionals who&apos;ve worked
               inside the industry, not just around it, so what you learn on
-              day one is what you'll use on the job.
+              day one is what you&apos;ll use on the job.
             </p>
 
             <p className="mt-4 max-w-xl leading-8 text-slate-400">

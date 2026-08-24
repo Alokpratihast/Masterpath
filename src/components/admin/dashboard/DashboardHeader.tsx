@@ -51,7 +51,7 @@ export default function DashboardHeader() {
         </h1>
 
         <p className="mt-2 text-slate-600">
-          Welcome back! Here's what's happening today.
+          Welcome back! Here&apos;s what&apos;s happening today.
         </p>
       </div>
 

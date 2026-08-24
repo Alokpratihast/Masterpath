@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import {
   ArrowRight,
   BriefcaseBusiness,
@@ -113,15 +115,15 @@ export default function EducationServices() {
               </div>
             </div>
 
-            {/* CTA */}
-            <a
+            {/* Lint fix: internal navigation uses Next Link. */}
+            <Link
               href="/courses"
               className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-[#071A4D] shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
             >
               Explore Courses
 
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

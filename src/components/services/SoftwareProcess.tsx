@@ -7,7 +7,6 @@ import {
   PenTool,
   Rocket,
   Search,
-  Sparkles,
   TrendingUp,
 } from "lucide-react";
 

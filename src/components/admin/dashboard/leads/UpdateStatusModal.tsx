@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { X } from "lucide-react";
 
 import { Lead } from "@/services/lead.client";
@@ -23,15 +23,11 @@ export default function UpdateStatusModal({
   onClose,
   onUpdate,
 }: UpdateStatusModalProps) {
+  // Lint fix: seed from the selected lead; parent remounts this modal by key.
   const [status, setStatus] = useState<
     "NEW" | "CONTACTED" | "CLOSED"
-  >("NEW");
+  >(lead?.status ?? "NEW");
 
-  useEffect(() => {
-    if (lead) {
-      setStatus(lead.status);
-    }
-  }, [lead]);
 
   if (!open || !lead) return null;
 

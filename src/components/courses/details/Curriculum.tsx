@@ -19,7 +19,8 @@ export default function Curriculum({
 
   const moduleCount = curriculum.length;
 
-  const lessonCount = curriculum.reduce((total, module: any) => {
+  // Lint fix: use the typed course curriculum items instead of any.
+  const lessonCount = curriculum.reduce((total, module) => {
     const lessons = module?.lessons ?? module?.topics ?? [];
     return total + (Array.isArray(lessons) ? lessons.length : 0);
   }, 0);
@@ -101,12 +102,12 @@ export default function Curriculum({
             )}
 
             {moduleCount > 0 ? (
-              curriculum.map((module) => (
-                <CurriculumItem
-                  key={module?.id ?? Math.random()}
-                  module={module}
-                />
-              ))
+              curriculum.map((module, index) => (
+  <CurriculumItem
+    key={module?.id ?? `module-${index}`}
+    module={module}
+  />
+))
             ) : (
               <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center text-sm font-medium text-slate-500">
                 Curriculum details for this course are coming soon.

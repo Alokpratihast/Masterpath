@@ -31,8 +31,13 @@ export default function LoginForm() {
       });
 
       router.push("/admin/dashboard");
-    } catch (error: any) {
-      alert(error.message);
+    } catch (error: unknown) {
+      // Lint fix: narrow unknown errors before reading message.
+      alert(
+        error instanceof Error
+          ? error.message
+          : "Login failed."
+      );
     } finally {
       setLoading(false);
     }

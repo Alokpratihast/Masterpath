@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 type LeadStatus =
   | "NEW"
@@ -109,20 +109,7 @@ export default function ContactLeadsTable({
   const [isSearching, setIsSearching] =
     useState(false);
 
-  /*
-   * Keep input synchronized with URL.
-   */
-  useEffect(() => {
-    setSearch(
-      searchParams.get("search") || ""
-    );
-
-    setStatusFilter(
-      (searchParams.get("status") as
-        | LeadStatus
-        | null) || "ALL"
-    );
-  }, [searchParams]);
+ 
 
   /*
    * Update URL query parameters.

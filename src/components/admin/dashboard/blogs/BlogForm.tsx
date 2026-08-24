@@ -18,6 +18,14 @@ type BlogFormProps = {
   blogId?: string;
 };
 
+// Lint fix: describe the API tag shape instead of using any.
+type BlogTagResult = {
+  tag?: {
+    name?: string | null;
+  } | null;
+  name?: string | null;
+};
+
 export default function BlogForm({
   blogId,
 }: BlogFormProps) {
@@ -187,7 +195,7 @@ export default function BlogForm({
         setTags(
           (blog.tags || [])
             .map(
-              (blogTag: any) =>
+              (blogTag: BlogTagResult) =>
                 blogTag.tag?.name ||
                 blogTag.name ||
                 ""
