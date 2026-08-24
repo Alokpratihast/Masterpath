@@ -13,7 +13,7 @@ import {
   X,
 } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type PlacementStatus =
   | "NEW"
@@ -93,6 +93,7 @@ export default function PlacementApplicationsTable({
   const [viewApplication, setViewApplication] =
     useState<PlacementApplication | null>(null);
 
+  // Lint fix: initialize filters from URL instead of syncing state in an effect.
   const [search, setSearch] = useState(
     searchParams.get("search") || ""
   );
@@ -106,17 +107,6 @@ export default function PlacementApplicationsTable({
 
   const [isSearching, setIsSearching] = useState(false);
 
-  /*
-   * Keep input synchronized with URL.
-   */
-  useEffect(() => {
-    setSearch(searchParams.get("search") || "");
-
-    setStatusFilter(
-      (searchParams.get("status") as PlacementStatus | null) ||
-        "ALL"
-    );
-  }, [searchParams]);
 
   /*
    * Update URL query parameters.

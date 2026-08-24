@@ -56,7 +56,7 @@ export default function BlogGrid({
         </h2>
 
         <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-muted-foreground">
-          We couldn't find any articles matching
+          We couldn&apos;t find any articles matching
           your current search or category. Try
           changing your filters and search again.
         </p>

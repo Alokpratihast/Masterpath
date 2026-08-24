@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 
 import { Lead, LeadClient } from "@/services/lead.client";
@@ -54,7 +54,8 @@ export default function LeadsPage() {
   /**
    * Load all leads
    */
-  async function loadLeads() {
+  // Lint fix: memoize reload so the effect dependency stays stable.
+  const loadLeads = useCallback(async () => {
     try {
       setLoading(true);
 
@@ -72,13 +73,42 @@ export default function LeadsPage() {
     } finally {
       setLoading(false);
     }
-  }
+  }, []);
 
   /**
    * Initial load
    */
   useEffect(() => {
-    loadLeads();
+    let active = true;
+
+    // Lint fix: avoid synchronous setState directly in the effect body.
+    async function loadInitialLeads() {
+      try {
+        const data = await LeadClient.getAllLeads();
+
+        if (active) {
+          setLeads(data);
+        }
+      } catch (error) {
+        console.error("Failed to load leads:", error);
+
+        toast.error(
+          error instanceof Error
+            ? error.message
+            : "Failed to load leads."
+        );
+      } finally {
+        if (active) {
+          setLoading(false);
+        }
+      }
+    }
+
+    loadInitialLeads();
+
+    return () => {
+      active = false;
+    };
   }, []);
 
   /**
@@ -312,6 +342,7 @@ export default function LeadsPage() {
 
       {/* Update Status Modal */}
       <UpdateStatusModal
+        key={selectedLeadForEdit?.id ?? "new"}
         open={isEditModalOpen}
         lead={selectedLeadForEdit}
         loading={updating}

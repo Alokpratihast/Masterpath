@@ -57,7 +57,7 @@ export default function Hero() {
             <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300">
               Gain practical skills through live projects, expert
               mentorship, and industry-focused training that prepares
-              you for today's most in-demand careers.
+              you for today&apos;s most in-demand careers.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">

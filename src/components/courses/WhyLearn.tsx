@@ -27,7 +27,7 @@ export default function WhyLearn() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            We don't just teach technologies. We help students develop
+            We don&apos;t just teach technologies. We help students develop
             practical skills, industry confidence, and career-ready
             experience through comprehensive training.
           </p>

@@ -3,8 +3,6 @@ import {
   Navigation,
 } from "lucide-react";
 
-import { siteConfig } from "@/data/site";
-
 export default function Map() {
   const officeAddress =
     "15th Main Rd, 3rd Stage, 4th Block, Sahakar Nagar, Byatarayanapura, Bengaluru, Karnataka 560092";

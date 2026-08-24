@@ -9,7 +9,6 @@ import {
 
 import {
   BlogListParams,
-  BlogStatus,
 } from "@/types/blog";
 
 export class BlogService {

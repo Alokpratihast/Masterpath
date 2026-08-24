@@ -14,13 +14,13 @@ export default function HeroContent() {
       </span>
 
       <h1 className="mt-8 text-5xl font-black leading-tight text-white lg:text-6xl">
-        Let's Build
+        Let&apos;s Build
         <br />
         Your Career Together
       </h1>
 
       <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300">
-        Whether you're looking for career guidance, course information,
+        Whether you&apos;re looking for career guidance, course information,
         or placement support, our team is here to help you at every step.
       </p>
 

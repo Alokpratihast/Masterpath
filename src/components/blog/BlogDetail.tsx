@@ -3,7 +3,6 @@ import Image from "next/image";
 import BlogHeader from "./BlogHeader";
 import BlogContent from "./BlogContent";
 import BlogSidebar from "./BlogSidebar";
-import RelatedBlogs from "./RelatedBlogs";
 
 type BlogDetailProps = {
   blog: {

@@ -3,7 +3,6 @@
 import {
   Check,
   Copy,
-  Link2,
   MessageCircle,
   Share2,
 } from "lucide-react";

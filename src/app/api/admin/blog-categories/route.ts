@@ -68,9 +68,7 @@ export async function POST(
  *
  * Get all blog categories.
  */
-export async function GET(
-  request: NextRequest
-) {
+export async function GET() {
   try {
     const categories =
       await BlogCategoryService.getCategories();

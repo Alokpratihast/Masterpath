@@ -56,7 +56,7 @@ export default function FinalCTA() {
         {/* Description */}
 
         <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-blue-100">
-          Whether you're a student, graduate, or working professional,
+          Whether you&apos;re a student, graduate, or working professional,
           MasterPath provides the guidance, practical training, and
           placement support needed to help you achieve your career goals.
         </p>

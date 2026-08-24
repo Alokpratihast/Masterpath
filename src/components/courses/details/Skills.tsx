@@ -20,7 +20,7 @@
 //         <div className="mx-auto max-w-3xl text-center">
 //           <span className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-blue-700">
 //             <Brain className="h-4 w-4" />
-//             Skills You'll Learn
+//             Skills You&apos;ll Learn
 //           </span>
 
 //           <h2 className="mt-6 text-4xl font-black text-slate-900 md:text-5xl">
@@ -119,7 +119,7 @@ export default function Skills({
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-blue-700">
             <Brain className="h-4 w-4" />
-            Skills You'll Learn
+            Skills You&apos;ll Learn
           </span>
 
           <h2 className="mt-6 text-4xl font-black text-slate-900 md:text-5xl">

@@ -260,34 +260,6 @@ type HeroVisualProps = {
   students: string[];
 };
 
-const programs = [
-  {
-    name: "Python",
-    icon: "/images/hero/python.png",
-    className: "left-[55px] top-[115px]",
-  },
-  {
-    name: "Full Stack Development",
-    icon: "/images/hero/fullstack.png",
-    className: "right-[0px] top-[175px]",
-  },
-  {
-    name: "Data Analytics",
-    icon: "/images/hero/data_analytics.png",
-    className: "left-[25px] bottom-[65px]",
-  },
-  {
-    name: "Digital Marketing",
-    icon: "/images/hero/digital_marketing.png",
-    className: "right-[15px] bottom-[-55px]",
-  },
-  {
-    name: "HR & Finance",
-    icon: "/images/hero/hr_finance.png",
-    className: "left-[130px] bottom-[20px]",
-  },
-];
-
 export default function HeroVisual({
   students,
 }: HeroVisualProps) {
