@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       JWT_SECRET: ${{ secrets.JWT_SECRET }}
+      IMAGEKIT_PRIVATE_KEY: ${{ secrets.IMAGEKIT_PRIVATE_KEY }}
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
     steps:
       - name: Checkout repository
