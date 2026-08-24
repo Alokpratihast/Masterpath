@@ -19,10 +19,9 @@ export default function Curriculum({
 
   const moduleCount = curriculum.length;
 
-  // Lint fix: use the typed course curriculum items instead of any.
+  // Type fix: CurriculumModule exposes lessons, not topics.
   const lessonCount = curriculum.reduce((total, module) => {
-    const lessons = module?.lessons ?? module?.topics ?? [];
-    return total + (Array.isArray(lessons) ? lessons.length : 0);
+    return total + module.lessons.length;
   }, 0);
 
   return (
