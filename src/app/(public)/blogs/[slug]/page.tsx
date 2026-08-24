@@ -9,13 +9,10 @@ type Props = {
   }>;
 };
 
-export async function generateMetadata({
-  params,
-}: Props) {
+export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
 
-  const blog =
-    await BlogService.getBlogBySlug(slug);
+  const blog = await BlogService.getBlogBySlug(slug);
 
   if (!blog) {
     return {
@@ -24,19 +21,19 @@ export async function generateMetadata({
   }
 
   return {
-    title:
-      blog.seoTitle ||
-      blog.title,
+    title: blog.seoTitle || blog.title,
 
     description:
       blog.seoDescription ||
       blog.excerpt ||
       undefined,
 
+    alternates: {
+      canonical: blog.canonicalUrl,
+    },
+
     openGraph: {
-      title:
-        blog.seoTitle ||
-        blog.title,
+      title: blog.seoTitle || blog.title,
 
       description:
         blog.seoDescription ||
